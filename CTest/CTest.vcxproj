@@ -128,11 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="fun.cpp" />
+    <ClCompile Include="002-高级.cpp" />
+    <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fun.h" />
+    <ClInclude Include="lib\fun.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

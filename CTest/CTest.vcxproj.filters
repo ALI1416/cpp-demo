@@ -13,17 +13,23 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="库文件">
+      <UniqueIdentifier>{843b4bf5-a3e4-472a-be74-bf6ec1c19e77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="001-基础.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="fun.cpp">
+    <ClCompile Include="002-高级.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fun.cpp">
+      <Filter>库文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fun.h">
+    <ClInclude Include="lib\fun.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

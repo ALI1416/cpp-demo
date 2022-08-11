@@ -5,5 +5,8 @@
 
 // ÉùÃ÷º¯Êı
 void print(int num);
+void swap01(int num1, int num2);
+void swap02(int* num1, int* num2);
+void swap03(int& num1, int& num2);
 
 #endif
