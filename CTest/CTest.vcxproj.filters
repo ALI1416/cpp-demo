@@ -27,6 +27,24 @@
     <ClCompile Include="lib\fun.cpp">
       <Filter>库文件</Filter>
     </ClCompile>
+    <ClCompile Include="003-对象-基础.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="004-对象-构造、析构函数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="005-对象-深、浅拷贝.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="006-对象-初始化列表、类嵌套.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="007-对象-静态属性、方法.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="008-对象-链式调用.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h">

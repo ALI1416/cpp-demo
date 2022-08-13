@@ -129,6 +129,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="002-高级.cpp" />
+    <ClCompile Include="003-对象-基础.cpp" />
+    <ClCompile Include="004-对象-构造、析构函数.cpp" />
+    <ClCompile Include="005-对象-深、浅拷贝.cpp" />
+    <ClCompile Include="006-对象-初始化列表、类嵌套.cpp" />
+    <ClCompile Include="007-对象-静态属性、方法.cpp" />
+    <ClCompile Include="008-对象-链式调用.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
   </ItemGroup>

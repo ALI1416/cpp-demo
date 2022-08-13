@@ -55,7 +55,7 @@ void add4(int a, int b)
     cout << "add4：" << a + b << endl;
 }
 
-void main()
+void main002()
 {
     /* 创建基本类型 */
     // 创建对象
