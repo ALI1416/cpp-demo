@@ -42,7 +42,13 @@
     <ClCompile Include="007-对象-静态属性、方法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="008-对象-链式调用.cpp">
+    <ClCompile Include="008-对象-链式、空指针调用函数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="009-对象-常属性、方法、对象.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="010-对象-友元.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

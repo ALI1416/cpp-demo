@@ -134,7 +134,9 @@
     <ClCompile Include="005-对象-深、浅拷贝.cpp" />
     <ClCompile Include="006-对象-初始化列表、类嵌套.cpp" />
     <ClCompile Include="007-对象-静态属性、方法.cpp" />
-    <ClCompile Include="008-对象-链式调用.cpp" />
+    <ClCompile Include="008-对象-链式、空指针调用函数.cpp" />
+    <ClCompile Include="009-对象-常属性、方法、对象.cpp" />
+    <ClCompile Include="010-对象-友元.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
   </ItemGroup>
