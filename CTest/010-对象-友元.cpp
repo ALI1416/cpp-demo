@@ -66,7 +66,7 @@ void Buliding::visit()
     cout << "·½·¨·ÃÎÊ£º" << r->bedRoom << endl;
 }
 
-void main()
+void main010()
 {
     Room r;
     globalFun(&r);
