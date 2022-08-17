@@ -78,6 +78,18 @@
     <ClCompile Include="019-继承-多继承.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="020-继承-虚继承.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="021-多态-虚函数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="022-多态-纯虚函数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="023-多态-虚析构、纯虚析构.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h">

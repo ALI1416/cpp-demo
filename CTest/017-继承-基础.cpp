@@ -23,7 +23,7 @@ public:
 };
 
 // 子类(派生类)
-// 继承方式
+// 继承方式(未标明，默认private)
 // public       公共继承    public->public      protected->protected    private不可访问
 // protected    保护继承    public->protected   protected->protected    private不可访问
 // private      私有继承    public->private     protected->private      private不可访问

@@ -146,6 +146,10 @@
     <ClCompile Include="017-继承-基础.cpp" />
     <ClCompile Include="018-继承-同名属性、方法.cpp" />
     <ClCompile Include="019-继承-多继承.cpp" />
+    <ClCompile Include="020-继承-虚继承.cpp" />
+    <ClCompile Include="021-多态-虚函数.cpp" />
+    <ClCompile Include="022-多态-纯虚函数.cpp" />
+    <ClCompile Include="023-多态-虚析构、纯虚析构.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
   </ItemGroup>
