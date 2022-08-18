@@ -49,7 +49,7 @@ public:
     }
 };
 
-void main()
+void main023()
 {
     Animal24* animal = new Cat24("ίχίχ");
     animal->speak();

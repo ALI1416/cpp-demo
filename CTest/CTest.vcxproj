@@ -150,6 +150,9 @@
     <ClCompile Include="021-多态-虚函数.cpp" />
     <ClCompile Include="022-多态-纯虚函数.cpp" />
     <ClCompile Include="023-多态-虚析构、纯虚析构.cpp" />
+    <ClCompile Include="024-文件-文本.cpp" />
+    <ClCompile Include="025-文件-二进制.cpp" />
+    <ClCompile Include="026-模板-基础.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
   </ItemGroup>

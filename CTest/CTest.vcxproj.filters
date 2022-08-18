@@ -16,79 +16,109 @@
     <Filter Include="库文件">
       <UniqueIdentifier>{843b4bf5-a3e4-472a-be74-bf6ec1c19e77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\001-基础">
+      <UniqueIdentifier>{216aca92-0d46-4861-b162-5994d3e08065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\004-继承">
+      <UniqueIdentifier>{581614aa-b1c1-4bc8-86f4-cff3fdbad97f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\002-对象">
+      <UniqueIdentifier>{fa5bd355-797f-483c-a5e9-af77defc7488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\003-运算符重载">
+      <UniqueIdentifier>{c9f07180-9c9a-4ffb-a34e-d8b8acdd6640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\005-多态">
+      <UniqueIdentifier>{f45c9d50-622a-4b17-95df-1865c7367f9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\006-文件">
+      <UniqueIdentifier>{0ffb7dff-e1a8-4f47-a3c6-ea00f478a5ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\007-模板">
+      <UniqueIdentifier>{b5634f89-41c0-4dbe-aac6-d4cc227ba658}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="001-基础.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="002-高级.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="lib\fun.cpp">
       <Filter>库文件</Filter>
     </ClCompile>
     <ClCompile Include="003-对象-基础.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="004-对象-构造、析构函数.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="005-对象-深、浅拷贝.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="006-对象-初始化列表、类嵌套.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="007-对象-静态属性、方法.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="008-对象-链式、空指针调用函数.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="009-对象-常属性、方法、对象.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="010-对象-友元.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\002-对象</Filter>
     </ClCompile>
     <ClCompile Include="011-运算符重载-加减.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\003-运算符重载</Filter>
     </ClCompile>
     <ClCompile Include="012-运算符重载-左移.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="015-运算符重载-关系.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="014-运算符重载-赋值.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\003-运算符重载</Filter>
     </ClCompile>
     <ClCompile Include="013-运算符重载-递增.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\003-运算符重载</Filter>
+    </ClCompile>
+    <ClCompile Include="014-运算符重载-赋值.cpp">
+      <Filter>源文件\003-运算符重载</Filter>
+    </ClCompile>
+    <ClCompile Include="015-运算符重载-关系.cpp">
+      <Filter>源文件\003-运算符重载</Filter>
     </ClCompile>
     <ClCompile Include="016-运算符重载-函数.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\003-运算符重载</Filter>
     </ClCompile>
     <ClCompile Include="017-继承-基础.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\004-继承</Filter>
     </ClCompile>
     <ClCompile Include="018-继承-同名属性、方法.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\004-继承</Filter>
     </ClCompile>
     <ClCompile Include="019-继承-多继承.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\004-继承</Filter>
     </ClCompile>
     <ClCompile Include="020-继承-虚继承.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\004-继承</Filter>
     </ClCompile>
     <ClCompile Include="021-多态-虚函数.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\005-多态</Filter>
     </ClCompile>
     <ClCompile Include="022-多态-纯虚函数.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\005-多态</Filter>
     </ClCompile>
     <ClCompile Include="023-多态-虚析构、纯虚析构.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\005-多态</Filter>
+    </ClCompile>
+    <ClCompile Include="024-文件-文本.cpp">
+      <Filter>源文件\006-文件</Filter>
+    </ClCompile>
+    <ClCompile Include="025-文件-二进制.cpp">
+      <Filter>源文件\006-文件</Filter>
+    </ClCompile>
+    <ClCompile Include="001-基础.cpp">
+      <Filter>源文件\001-基础</Filter>
+    </ClCompile>
+    <ClCompile Include="002-高级.cpp">
+      <Filter>源文件\001-基础</Filter>
+    </ClCompile>
+    <ClCompile Include="026-模板-基础.cpp">
+      <Filter>源文件\007-模板</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
