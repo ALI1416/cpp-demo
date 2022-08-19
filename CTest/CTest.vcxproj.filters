@@ -120,6 +120,9 @@
     <ClCompile Include="026-模板-基础.cpp">
       <Filter>源文件\007-模板</Filter>
     </ClCompile>
+    <ClCompile Include="027-模板-高级.cpp">
+      <Filter>源文件\007-模板</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h">
