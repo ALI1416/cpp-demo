@@ -28,6 +28,13 @@ void swapT(T& a, T& b)
     b = t;
 }
 
+template<typename T>
+void getT()
+{
+    // 使用typeid获取泛型类型
+    cout << "泛型类型：" << typeid(T).name() << endl;
+}
+
 void main026()
 {
     int a = 123;
@@ -52,4 +59,8 @@ void main026()
     // 指明数据类型
     swapT<double>(e, f);
     cout << "交换后：e:" << e << ",f:" << f << endl;
+
+    // 获取泛型类型
+    getT<int>();
+    getT<string>();
 }

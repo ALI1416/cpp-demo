@@ -152,8 +152,10 @@
     <ClCompile Include="023-多态-虚析构、纯虚析构.cpp" />
     <ClCompile Include="024-文件-文本.cpp" />
     <ClCompile Include="025-文件-二进制.cpp" />
-    <ClCompile Include="026-模板-基础.cpp" />
-    <ClCompile Include="027-模板-高级.cpp" />
+    <ClCompile Include="026-函数模板-基础.cpp" />
+    <ClCompile Include="027-函数模板-高级.cpp" />
+    <ClCompile Include="028-类模板-基础.cpp" />
+    <ClCompile Include="029-类模板-函数创建时间.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
   </ItemGroup>

@@ -29,7 +29,7 @@ void printAdd(T a, T b, T c)
     cout << "º¯ÊýÄ£°åprintAdd:" << a + b + c << endl;
 }
 
-void main()
+void main027()
 {
     int a = 123;
     int b = 456;
