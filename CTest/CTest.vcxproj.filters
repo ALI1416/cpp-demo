@@ -129,9 +129,39 @@
     <ClCompile Include="029-类模板-函数创建时间.cpp">
       <Filter>源文件\007-模板</Filter>
     </ClCompile>
+    <ClCompile Include="030-类模板-做函数参数.cpp">
+      <Filter>源文件\007-模板</Filter>
+    </ClCompile>
+    <ClCompile Include="031-类模板-继承.cpp">
+      <Filter>源文件\007-模板</Filter>
+    </ClCompile>
+    <ClCompile Include="032-类模板-方法类外实现.cpp">
+      <Filter>源文件\007-模板</Filter>
+    </ClCompile>
+    <ClCompile Include="033-类模板-分文件编写.cpp">
+      <Filter>源文件\007-模板</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\person33.cpp">
+      <Filter>库文件</Filter>
+    </ClCompile>
+    <ClCompile Include="034-类模板-方法类内外实现-友元.cpp">
+      <Filter>源文件\007-模板</Filter>
+    </ClCompile>
+    <ClCompile Include="035-类模板-示例MyArray.cpp">
+      <Filter>源文件\007-模板</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\person33.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\person34.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\MyArray.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

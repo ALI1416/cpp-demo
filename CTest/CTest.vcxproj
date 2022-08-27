@@ -156,11 +156,21 @@
     <ClCompile Include="027-函数模板-高级.cpp" />
     <ClCompile Include="028-类模板-基础.cpp" />
     <ClCompile Include="029-类模板-函数创建时间.cpp" />
+    <ClCompile Include="030-类模板-做函数参数.cpp" />
+    <ClCompile Include="031-类模板-继承.cpp" />
+    <ClCompile Include="032-类模板-方法类外实现.cpp" />
+    <ClCompile Include="033-类模板-分文件编写.cpp" />
+    <ClCompile Include="034-类模板-方法类内外实现-友元.cpp" />
+    <ClCompile Include="035-类模板-示例MyArray.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
+    <ClCompile Include="lib\person33.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h" />
+    <ClInclude Include="lib\MyArray.hpp" />
+    <ClInclude Include="lib\person33.h" />
+    <ClInclude Include="lib\person34.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
