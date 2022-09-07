@@ -37,6 +37,9 @@
     <Filter Include="源文件\007-模板">
       <UniqueIdentifier>{b5634f89-41c0-4dbe-aac6-d4cc227ba658}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\008-STL">
+      <UniqueIdentifier>{b6aa878b-aff2-4843-9fc8-c49d5fe105c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\fun.cpp">
@@ -149,6 +152,12 @@
     </ClCompile>
     <ClCompile Include="035-类模板-示例MyArray.cpp">
       <Filter>源文件\007-模板</Filter>
+    </ClCompile>
+    <ClCompile Include="036-基础.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="037-容器-string.cpp">
+      <Filter>源文件\008-STL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

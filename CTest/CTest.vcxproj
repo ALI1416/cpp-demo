@@ -77,6 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <ExceptionHandling>Async</ExceptionHandling>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -162,6 +163,8 @@
     <ClCompile Include="033-类模板-分文件编写.cpp" />
     <ClCompile Include="034-类模板-方法类内外实现-友元.cpp" />
     <ClCompile Include="035-类模板-示例MyArray.cpp" />
+    <ClCompile Include="036-基础.cpp" />
+    <ClCompile Include="037-容器-string.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
     <ClCompile Include="lib\person33.cpp" />
