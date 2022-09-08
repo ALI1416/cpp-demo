@@ -1,17 +1,12 @@
 #include<iostream>
-// 导入string字符串库
-#include<string>
-// 导入标准算法库
-#include<algorithm>
 using namespace std;
 
 // string是c++风格的字符串，本质是一个类
 /* string和char*区别 */
 // char*是一个指针
 // string是一个类，内部封装了char*，来管理这个字符串，是char*型的容器
-void main()
+void main037()
 {
-
     /* 构造 */
     // 空字符串(默认)
     // string();
@@ -30,7 +25,7 @@ void main()
     string s5(10, 'a');
     cout << "构造:s1:" << s1 << ",s2:" << s2 << ",s3:" << s3 << ",s4:" << s4 << ",s5:" << s5 << endl;
 
-    /* 赋值操作 */
+    /* 赋值 */
     // char*类型字符串赋值给当前字符串
     // string& operator=(const char* s);
     string s6 = "hello";
@@ -94,17 +89,24 @@ void main()
     cout << ",s13:" << s13 << endl;
 
     /* 查找 */
+    //       pos:0|   5|  10|  15|  20|  25|  30|  35|
+    string s17 = "abcdefaabbccddeeffaaayyyyqqqqqkkkkkk";
+    //       npos:|35  |30  |25  |20  |15  |10  |5   |0
+    string s18 = "ddee";
     // 从左向右查找
-    // 查找字符串第一次出现的位置，从pos开始
+    // 查找字符串第一次出现的位置，从pos开始(跳过前pos个字符)
     // int find(const string& s, int pos = 0) const;
-    string s17 = "abcdefaabbccddeeffaaaffeeddbbccaafedbca";
-    string s18 = "aa";
     cout << "查找第一次:pos:" << s17.find(s18);
     cout << ",pos:" << s17.find(s18, 10);
     // 查找char*类型字符串第一次出现的位置，从pos开始
     // int find(const char* s, int pos = 0) const;
     cout << ",pos:" << s17.find("aa");
     cout << ",pos:" << s17.find("aa", 10);
+    // 如果找不到，返回的是unsigned int类型，即-1
+    // 如果打印出来会显示4294967295(0xFFFF FFFF)
+    // 如果`结果==-1`，会打印true(1)
+    cout << ",pos:" << s17.find("z");
+    cout << ",是否找到:" << (s17.find("z") == -1);
     // 查找char*类型字符串的前n个字符的第一次出现的位置，从pos开始
     // int find(const char* s, int pos, int n) const;
     cout << ",pos:" << s17.find("aaa", 0, 2);
@@ -113,19 +115,19 @@ void main()
     cout << ",pos:" << s17.find('a');
     cout << ",pos:" << s17.find('a', 10) << endl;
     // 从右向左查找
-    // 查找字符串最后一次出现的位置，从npos开始
-    // int rfind(const string& s, int npos = 0) const;
+    // 查找字符串最后一次出现的位置(只查找前npos+指定字符串长度个字符)
+    // int rfind(const string& s, int npos = 4294967295) const;
     cout << "查找最后一次:pos:" << s17.rfind(s18);
-    cout << ",pos:" << s17.rfind(s18, 10);
-    // 查找char*类型字符串最后一次出现的位置，从npos开始
-    // int rfind(const char* s, int npos = 0) const;
+    cout << ",pos:" << s17.rfind(s18, 20);
+    // 查找char*类型字符串最后一次出现的位置
+    // int rfind(const char* s, int npos = 4294967295) const;
     cout << ",pos:" << s17.rfind("aa");
-    cout << ",pos:" << s17.rfind("aa", 10);
-    // 查找char*类型字符串的前n个字符的最后一次出现的位置，从npos开始
+    cout << ",pos:" << s17.rfind("aaa", 10);
+    // 查找char*类型字符串的前n个字符的最后一次出现的位置
     // int rfind(const char* s, int npos, int n) const;
     cout << ",pos:" << s17.rfind("aaa", 100, 2);
-    // 查找字符最后一次出现的位置，从npos开始
-    // int rfind(const char c, int npos = 0) const;
+    // 查找字符最后一次出现的位置
+    // int rfind(const char c, int npos = 4294967295) const;
     cout << ",pos:" << s17.rfind('a');
     cout << ",pos:" << s17.rfind('a', 10) << endl;
 
@@ -139,5 +141,55 @@ void main()
     // string& replace(int pos, int n, const char* s);
     s17.replace(10, 3, "12345");
     cout << "替换:s17:" << s17 << endl;
+
+    /* 比较 */
+    string s20 = "a";
+    string s21 = "a";
+    // 按照ASCII码进行比较
+    // =返回0，>返回1，<返回-1
+    // int compare(const string& s) const;
+    cout << "比较:" << s20.compare(s21);
+    // int compare(const char* s) const;
+    cout << "," << s20.compare("b");
+    cout << "," << s20.compare("A") << endl;
+
+    /* 存取 */
+    string s22 = "abcd";
+    // 通过[]取字符
+    // char& operator[](int n);
+    cout << "存取:" << s22[2];
+    s22[2] = '3';
+    // 通过at方法取字符
+    // char& at(int n);
+    cout << "," << s22.at(2);
+    s22.at(2) = '4';
+    cout << "," << s22.at(2) << endl;
+
+    /* 插入 */
+    string s23 = "abcde";
+    // 从pos处插入char*类型字符串
+    // string& insert(int pos, const char* s);
+    cout << "插入:" << s23.insert(2, "123");
+    // 从pos处插入字符串
+    // string& insert(int pos, string& s);
+    string s24 = "!!!";
+    cout << "," << s23.insert(3, s24);
+    // 从pos处插入n个字符
+    // string& insert(int pos, int n, char c);
+    cout << "," << s23.insert(4, 5, '+') << endl;
+
+    /* 删除 */
+    // 从pos处删除n个字符(n默认到尾部)
+    // string& erase(int pos, int n = npos);
+    cout << "删除:" << s23.erase(4, 3);
+    cout << "," << s23.erase(6) << endl;
+
+    /* 子串 */
+    string s25 = "abcdef";
+    // 从pos处开始获取n个字符(n默认到尾部)
+    // string& substr(int pos = 0, int n = npos);
+    cout << "删除:" << s25.substr(2, 3);
+    cout << "," << s25.substr(2);
+    cout << "," << s25.substr() << endl;
 
 }

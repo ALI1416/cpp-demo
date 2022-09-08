@@ -156,7 +156,10 @@
     <ClCompile Include="036-基础.cpp">
       <Filter>源文件\008-STL</Filter>
     </ClCompile>
-    <ClCompile Include="037-容器-string.cpp">
+    <ClCompile Include="037-容器-string-字符串.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="038-容器-vector-单端数组.cpp">
       <Filter>源文件\008-STL</Filter>
     </ClCompile>
   </ItemGroup>
