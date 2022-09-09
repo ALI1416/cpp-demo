@@ -162,6 +162,24 @@
     <ClCompile Include="038-容器-vector-单端数组.cpp">
       <Filter>源文件\008-STL</Filter>
     </ClCompile>
+    <ClCompile Include="040-容器-stack-栈.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="041-容器-queue-队列.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="039-容器-deque-双端数组.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="042-容器-list-双向循环链表.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="044-容器-set-集合.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="043-容器-pari-对组.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h">

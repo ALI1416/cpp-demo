@@ -1,4 +1,5 @@
 // 引用库，<>是系统库，""是本地库
+// 常用功能，都在iostream库里面
 #include<iostream>
 #include"lib/fun.h"
 // 使用#define定义常量
