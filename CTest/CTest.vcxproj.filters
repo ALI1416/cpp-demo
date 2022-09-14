@@ -180,6 +180,9 @@
     <ClCompile Include="043-容器-pari-对组.cpp">
       <Filter>源文件\008-STL</Filter>
     </ClCompile>
+    <ClCompile Include="045-容器-map-映射.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h">

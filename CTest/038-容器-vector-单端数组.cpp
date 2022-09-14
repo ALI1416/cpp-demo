@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 // 打印
@@ -214,5 +215,17 @@ void main038()
     v15.reserve(100000);
     cout << "capacity:" << v15.capacity();
     cout << ",size:" << v15.size() << endl;
+
+    /* 排序和反转 */
+    vector<int> v16;
+    v16.push_back(1);
+    v16.push_back(5);
+    v16.push_back(2);
+    v16.push_back(4);
+    v16.push_back(3);
+    // 默认升序排列(会改变原数据)
+    // void sort(iterator start, iterator end);
+    sort(v16.begin(), v16.end());
+    print(v16);
 
 }

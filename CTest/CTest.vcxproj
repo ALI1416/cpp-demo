@@ -172,6 +172,7 @@
     <ClCompile Include="042-容器-list-双向循环链表.cpp" />
     <ClCompile Include="043-容器-pari-对组.cpp" />
     <ClCompile Include="044-容器-set-集合.cpp" />
+    <ClCompile Include="045-容器-map-映射.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
     <ClCompile Include="lib\person33.cpp" />

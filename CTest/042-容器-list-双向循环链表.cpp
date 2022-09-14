@@ -1,5 +1,6 @@
 #include<iostream>
 #include<list>
+#include<algorithm>
 using namespace std;
 
 // 打印
@@ -11,6 +12,12 @@ void print(list<int> t)
         cout << *it << ",";
     }
     cout << endl;
+}
+
+// 自定义降序排列
+bool desc(const int& v1, const int& v2)
+{
+    return v1 > v2;
 }
 
 // 双向循环链表
@@ -131,5 +138,21 @@ void main042()
     // void clear();
     t9.clear();
     print(t9);
+
+    /* 反转和排序 */
+    list<int> t10;
+    t10.push_back(4);
+    t10.push_back(2);
+    t10.push_back(3);
+    t10.push_back(5);
+    t10.push_back(1);
+    // 使用自定义排序规则
+    // void sort(function());
+    t10.sort(desc);
+    print(t10);
+    // 反转
+    // void reverse();
+    t10.reverse();
+    print(t10);
 
 }
