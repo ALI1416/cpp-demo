@@ -176,6 +176,11 @@
     <ClCompile Include="046-谓词.cpp" />
     <ClCompile Include="047-内置函数对象.cpp" />
     <ClCompile Include="048-算法-for_each-遍历.cpp" />
+    <ClCompile Include="049-算法-transform-转移.cpp" />
+    <ClCompile Include="050-查找-find-普通查找.cpp" />
+    <ClCompile Include="051-查找-find_if-条件查找.cpp" />
+    <ClCompile Include="052-查找-adjacent-相邻元素查找.cpp" />
+    <ClCompile Include="053-存在-binary_search-查找是否存在.cpp" />
     <ClCompile Include="lib\fun.cpp" />
     <ClCompile Include="001-基础.cpp" />
     <ClCompile Include="lib\person33.cpp" />

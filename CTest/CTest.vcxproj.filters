@@ -192,6 +192,21 @@
     <ClCompile Include="048-算法-for_each-遍历.cpp">
       <Filter>源文件\008-STL</Filter>
     </ClCompile>
+    <ClCompile Include="049-算法-transform-转移.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="050-查找-find-普通查找.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="051-查找-find_if-条件查找.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="052-查找-adjacent-相邻元素查找.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
+    <ClCompile Include="053-存在-binary_search-查找是否存在.cpp">
+      <Filter>源文件\008-STL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fun.h">
