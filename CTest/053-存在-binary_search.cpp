@@ -3,7 +3,7 @@
 #include<algorithm>
 using namespace std;
 
-void main()
+void main053()
 {
     set<int> v;
     for (int i = 0; i < 10; i++)

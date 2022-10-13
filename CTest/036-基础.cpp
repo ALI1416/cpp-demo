@@ -11,8 +11,8 @@ using namespace std;
 // `容器`和`算法`之间，通过`迭代器`进行无缝连接
 // STL几乎所有的代码都采用了模板类或者模板函数
 /* 六大组件 */
-// 1、容器：数据结构。如string、vector、list、queue、deque、stack、(multi)set、(multi)map、pari等
-// 2、算法：常用算法。如for_each、transform、find(_if)、adjacent_find、binary_search、count(_if)、sort、random_shuffle、merge、reverse、copy、replace(_if)、swap、accumulate、fill、set_intersection、set_union、set_difference等
+// 1、容器：数据结构。如string[字符串]、vector[单端数组]、deque[双端数组]、stack[栈]、queue[队列]、list[双向循环链表]、pari[对组]、(multi)set[(可重复)集合]、(multi)map[(可重复)映射]等
+// 2、算法：常用算法。如for_each[遍历]、transform[转移]、find(_if)[(条件)查找]、adjacent_find[相邻元素查找]、binary_search[存在]、count(_if)[(条件)计数]、sort[排序]、merge[合并]、reverse[反转]、random_shuffle[洗牌]、copy[拷贝]、replace(_if)[(条件)替换]、swap[交换]、accumulate[累计]、fill[填充]、set_intersection[交集]、set_union[并集]、set_difference[差集]等
 // 3、迭代器：扮演了`容器`和`算法`之间的胶合剂
 // 4、仿函数：行为类似`函数`，可作为算法的某种策略
 // 5、适配器：一种用来修饰`容器`或者`仿函数`或者`迭代器接口`的东西
