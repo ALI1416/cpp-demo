@@ -2,7 +2,7 @@
 #include<set>
 using namespace std;
 
-// ×Ô¶¨ÒåÀàĞÍ
+// è‡ªå®šä¹‰ç±»å‹
 class Person044
 {
     friend ostream& operator<<(ostream& cout, Person044& p);
@@ -12,36 +12,36 @@ public:
     Person044(string name, int year) :name(name), year(year) {};
 };
 
-// Person044Êä³ö
+// Person044è¾“å‡º
 ostream& operator<<(ostream& cout, const Person044& p)
 {
-    cout << "ĞÕÃû£º" << p.name << "£¬³öÉúÄê£º" << p.year;
+    cout << "å§“åï¼š" << p.name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << p.year;
     return cout;
 }
 
-// ×Ô¶¨ÒåÀàĞÍÅÅĞò
+// è‡ªå®šä¹‰ç±»å‹æ’åº
 class Person044Sort
 {
 public:
-    // yearÉıĞò·Âº¯Êı
+    // yearå‡åºä»¿å‡½æ•°
     bool operator()(const Person044& v1, const Person044& v2) const
     {
         return v1.year < v2.year;
     }
 };
 
-// ×Ô¶¨ÒåÅÅĞò
+// è‡ªå®šä¹‰æ’åº
 class Desc
 {
 public:
-    // ½µĞò·Âº¯Êı
+    // é™åºä»¿å‡½æ•°
     bool operator()(const int& v1, const int& v2) const
     {
         return v1 > v2;
     }
 };
 
-// ´òÓ¡
+// æ‰“å°
 void print(set<int> s)
 {
     for (set<int>::const_iterator it = s.begin(); it != s.end(); it++)
@@ -77,12 +77,12 @@ void print4(multiset<int> s)
     cout << endl;
 }
 
-// setÊÇ¹ØÁªÊ½ÈİÆ÷£¬µ×²ã²ÉÓÃ¶ş²æÊ÷´æ´¢£¬ÔªËØÊÇÓĞĞòµÄ
-// set²»ÔÊĞíÓĞÖØ¸´Öµ£¬multisetÔÊĞíÓĞÖØ¸´Öµ
+// setæ˜¯å…³è”å¼å®¹å™¨ï¼Œåº•å±‚é‡‡ç”¨äºŒå‰æ ‘å­˜å‚¨ï¼Œå…ƒç´ æ˜¯æœ‰åºçš„
+// setä¸å…è®¸æœ‰é‡å¤å€¼ï¼Œmultisetå…è®¸æœ‰é‡å¤å€¼
 void main044()
 {
-    /* ¹¹Ôì */
-    // ÎŞ²Î(Ä¬ÈÏ)
+    /* æ„é€  */
+    // æ— å‚(é»˜è®¤)
     // set<T>();
     set<int> s1;
     s1.insert(3);
@@ -91,22 +91,22 @@ void main044()
     s1.insert(2);
     s1.insert(4);
     print(s1);
-    // ¿½±´
+    // æ‹·è´
     // set<T>(const set<T>& s);
     set<int> s2(s1);
     print(s1);
 
-    /* ¸³Öµ */
-    // set¸³Öµ¸øµ±Ç°set
+    /* èµ‹å€¼ */
+    // setèµ‹å€¼ç»™å½“å‰set
     // set& operator=(const set& s);
     set<int> s3 = s2;
     print(s1);
 
-    /* ´óĞ¡²Ù×÷ */
+    /* å¤§å°æ“ä½œ */
     set<int> s4;
-    // ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
+    // åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©º
     // bool empty();
-    // ·µ»ØÕ»µÄ³¤¶È
+    // è¿”å›æ ˆçš„é•¿åº¦
     // int size();
     cout << "empty:" << s4.empty() << ",size:" << s4.size() << endl;
     s4.insert(1);
@@ -114,9 +114,9 @@ void main044()
     s4.insert(7);
     cout << "empty:" << s4.empty() << ",size:" << s4.size() << endl;
 
-    /* ´æÈ¡ */
+    /* å­˜å– */
     set<int> s5;
-    // ²åÈë
+    // æ’å…¥
     // pair<set<T>::iterator, bool> insert(T& value);
     s5.insert(3);
     s5.insert(1);
@@ -124,39 +124,39 @@ void main044()
     s5.insert(2);
     s5.insert(4);
     print(s5);
-    // É¾³ıµü´úÆ÷Ö¸ÏòÔªËØ
+    // åˆ é™¤è¿­ä»£å™¨æŒ‡å‘å…ƒç´ 
     // iterator erase(iterator pos);
     s5.erase(--s5.end());
     print(s5);
-    // É¾³ıµü´úÆ÷startµ½endÖ®¼äµÄÔªËØ
+    // åˆ é™¤è¿­ä»£å™¨startåˆ°endä¹‹é—´çš„å…ƒç´ 
     // iterator erase(iterator start, iterator end);
     s5.erase(++s5.begin(), --s5.end());
     print(s5);
-    // É¾³ıÖ¸¶¨keyµÄÔªËØ
+    // åˆ é™¤æŒ‡å®škeyçš„å…ƒç´ 
     // ? erase(T);
     s5.erase(4);
-    // Çå¿ÕÈİÆ÷
+    // æ¸…ç©ºå®¹å™¨
     // void clear();
     s5.clear();
     print(s5);
 
-    /* ²éÕÒºÍÍ³¼Æ */
+    /* æŸ¥æ‰¾å’Œç»Ÿè®¡ */
     set<int> s6;
     s6.insert(3);
     s6.insert(1);
     s6.insert(5);
     s6.insert(2);
     s6.insert(4);
-    // ²éÕÒÊÇ·ñ´æÔÚ¸ÃÖµ£¬´æÔÚ·µ»Øµü´úÆ÷£¬²»´æÔÚ·µ»Øs.end();
+    // æŸ¥æ‰¾æ˜¯å¦å­˜åœ¨è¯¥å€¼ï¼Œå­˜åœ¨è¿”å›è¿­ä»£å™¨ï¼Œä¸å­˜åœ¨è¿”å›s.end();
     // iterator find(T value);
-    cout << "²éÕÒµ½µÄÖµ:" << *s6.find(2) << endl;
-    cout << "ÊÇ·ñ²éÕÒµ½:" << (s6.find(0) != s6.end()) << endl;
-    // Í³¼Æ¸öÊı
+    cout << "æŸ¥æ‰¾åˆ°çš„å€¼:" << *s6.find(2) << endl;
+    cout << "æ˜¯å¦æŸ¥æ‰¾åˆ°:" << (s6.find(0) != s6.end()) << endl;
+    // ç»Ÿè®¡ä¸ªæ•°
     // int count(T value);
-    cout << "¸öÊı:" << s6.count(2) << endl;
-    cout << "¸öÊı:" << s6.count(0) << endl;
+    cout << "ä¸ªæ•°:" << s6.count(2) << endl;
+    cout << "ä¸ªæ•°:" << s6.count(0) << endl;
 
-    /* ×Ô¶¨ÒåÅÅĞò */
+    /* è‡ªå®šä¹‰æ’åº */
     set<int, Desc> s7;
     s7.insert(3);
     s7.insert(1);
@@ -165,21 +165,21 @@ void main044()
     s7.insert(4);
     print2(s7);
 
-    /* ×Ô¶¨ÒåÀàĞÍÅÅĞò */
+    /* è‡ªå®šä¹‰ç±»å‹æ’åº */
     set<Person044, Person044Sort> s8;
     s8.insert(Person044("ck", 1998));
     s8.insert(Person044("kk", 1990));
     s8.insert(Person044("ck", 2008));
     print3(s8);
 
-    /* setºÍmultiset */
+    /* setå’Œmultiset */
     set<int> s9;
     pair<set<int>::iterator, bool> r1 = s9.insert(1);
     pair<set<int>::iterator, bool> r2 = s9.insert(1);
     print(s9);
-    cout << "µÚÒ»´Î²åÈëÊÇ·ñ³É¹¦:" << r1.second << ",µÚ¶ş´Î²åÈëÊÇ·ñ³É¹¦:" << r2.second << endl;
+    cout << "ç¬¬ä¸€æ¬¡æ’å…¥æ˜¯å¦æˆåŠŸ:" << r1.second << ",ç¬¬äºŒæ¬¡æ’å…¥æ˜¯å¦æˆåŠŸ:" << r2.second << endl;
     multiset<int> s10;
-    // ²åÈë
+    // æ’å…¥
     // iterator insert(T& value);
     s10.insert(1);
     s10.insert(1);

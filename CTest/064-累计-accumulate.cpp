@@ -10,6 +10,7 @@ void main064()
     {
         v.push_back(i);
     }
+    // 累计
     // T accumulate(iterator start, iterator end, T initValue);
     int total = accumulate(v.begin(), v.end(), 0);
     cout << total << endl;

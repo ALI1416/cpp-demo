@@ -42,18 +42,18 @@ bool Cat2::gender = false;
 void main018()
 {
     Cat2 cat;
-    // Í¬ÃûÊôĞÔ»ò·½·¨£¬×ÓÀà·ÃÎÊ£¬ÏÔÊ¾×ÓÀàµÄÖµ
+    // åŒåå±æ€§æˆ–æ–¹æ³•ï¼Œå­ç±»è®¿é—®ï¼Œæ˜¾ç¤ºå­ç±»çš„å€¼
     cout << "cat.year:" << cat.year << endl;
-    // ÈçĞè·ÃÎÊ¸¸Àà£¬ĞèÒª¼ÓÉÏ¸¸ÀàµÄÃû³Æ
+    // å¦‚éœ€è®¿é—®çˆ¶ç±»ï¼Œéœ€è¦åŠ ä¸Šçˆ¶ç±»çš„åç§°
     cout << "cat.Animal2::year:" << cat.Animal2::year << endl;
     cat.printYear();
     cat.Animal2::printYear();
-    // ×ÓÀà»á¸²¸Çµô¸¸ÀàÖĞËùÓĞµÄÍ¬Ãûº¯Êı£¬ËùÒÔ´Ë´¦ĞèÒª¼ÓÉÏ¸¸ÀàÃû³Æ
+    // å­ç±»ä¼šè¦†ç›–æ‰çˆ¶ç±»ä¸­æ‰€æœ‰çš„åŒåå‡½æ•°ï¼Œæ‰€ä»¥æ­¤å¤„éœ€è¦åŠ ä¸Šçˆ¶ç±»åç§°
     cat.Animal2::printYear(1234);
 
-    // ¾²Ì¬
+    // é™æ€
     cout << "Cat2::gender:" << Cat2::gender << endl;
-    // Í¨¹ıCat2À´·ÃÎÊ¸¸ÀàAnimal2ÖĞµÄÊôĞÔgender
+    // é€šè¿‡Cat2æ¥è®¿é—®çˆ¶ç±»Animal2ä¸­çš„å±æ€§gender
     cout << "Cat2::Animal2::gender:" << Cat2::Animal2::gender << endl;
     cout << "Animal2::gender:" << Animal2::gender << endl;
     Cat2::print();

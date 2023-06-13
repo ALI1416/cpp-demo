@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// Ê¹ÓÃ¶ººÅ·Ö¸ô¶à¸ö·ºĞÍ£¬¿ÉÒÔÉèÖÃÄ¬ÈÏÊı¾İÀàĞÍ
+// ä½¿ç”¨é€—å·åˆ†éš”å¤šä¸ªæ³›å‹ï¼Œå¯ä»¥è®¾ç½®é»˜è®¤æ•°æ®ç±»å‹
 template<class NameType, class YearType = int>
 class Person28
 {
@@ -13,17 +13,17 @@ public:
 
     void print()
     {
-        cout << "ĞÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
 };
 
 void main028()
 {
-    // ÀàÄ£°åÎŞ·¨×Ô¶¯ÍÆµ¼Êı¾İÀàĞÍ
+    // ç±»æ¨¡æ¿æ— æ³•è‡ªåŠ¨æ¨å¯¼æ•°æ®ç±»å‹
     Person28<string, int> p("ck", 1998);
     p.print();
 
-    // Ê¹ÓÃÄ¬ÈÏÊı¾İÀàĞÍ
+    // ä½¿ç”¨é»˜è®¤æ•°æ®ç±»å‹
     Person28<string> p2("kk", 2008);
     p2.print();
 

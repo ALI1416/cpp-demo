@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
 
-// ¸¸Àà(»ùÀà)
-// ¶¯ÎïÀà
+// çˆ¶ç±»(åŸºç±»)
+// åŠ¨ç‰©ç±»
 class Animal
 {
 public:
@@ -14,52 +14,52 @@ private:
 public:
     Animal()
     {
-        cout << "Animal¹¹Ôì" << endl;
+        cout << "Animalæ„é€ " << endl;
     }
     ~Animal()
     {
-        cout << "AnimalÎö¹¹" << endl;
+        cout << "Animalææ„" << endl;
     }
 };
 
-// ×ÓÀà(ÅÉÉúÀà)
-// ¼Ì³Ğ·½Ê½(Î´±êÃ÷£¬Ä¬ÈÏprivate)
-// public       ¹«¹²¼Ì³Ğ    public->public      protected->protected    private²»¿É·ÃÎÊ
-// protected    ±£»¤¼Ì³Ğ    public->protected   protected->protected    private²»¿É·ÃÎÊ
-// private      Ë½ÓĞ¼Ì³Ğ    public->private     protected->private      private²»¿É·ÃÎÊ
+// å­ç±»(æ´¾ç”Ÿç±»)
+// ç»§æ‰¿æ–¹å¼(æœªæ ‡æ˜ï¼Œé»˜è®¤private)
+// public       å…¬å…±ç»§æ‰¿    public->public      protected->protected    privateä¸å¯è®¿é—®
+// protected    ä¿æŠ¤ç»§æ‰¿    public->protected   protected->protected    privateä¸å¯è®¿é—®
+// private      ç§æœ‰ç»§æ‰¿    public->private     protected->private      privateä¸å¯è®¿é—®
 //
 
-// Ã¨Àà
+// çŒ«ç±»
 class Cat : public Animal
 {
-// ¼Ì³ĞÏÂÀ´µÄÊôĞÔ
+// ç»§æ‰¿ä¸‹æ¥çš„å±æ€§
 //public:
 //    int year;
 //protected:
 //    string name;
 public:
-    // ¹¹ÔìË³Ğò£º¸¸Àà->×ÓÀà
-    // Îö¹¹Ë³Ğò£º×ÓÀà->¸¸Àà
+    // æ„é€ é¡ºåºï¼šçˆ¶ç±»->å­ç±»
+    // ææ„é¡ºåºï¼šå­ç±»->çˆ¶ç±»
     Cat(int year)
     {
-        cout << "Cat¹¹Ôì" << endl;
+        cout << "Catæ„é€ " << endl;
         this->year = year;
-        name = "Ã¨";
+        name = "çŒ«";
     }
     ~Cat()
     {
-        cout << "CatÎö¹¹" << endl;
+        cout << "Catææ„" << endl;
     }
     void print()
     {
-        cout << "ĞÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
 };
 
-// ¹·Àà
+// ç‹—ç±»
 class Dog : protected Animal
 {
-// ¼Ì³ĞÏÂÀ´µÄÊôĞÔ
+// ç»§æ‰¿ä¸‹æ¥çš„å±æ€§
 //protected:
 //    int year;
 //protected:
@@ -69,18 +69,18 @@ public:
     Dog()
     {
         year = 2021;
-        name = "¹·";
+        name = "ç‹—";
     }
     void print()
     {
-        cout << "ĞÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
 };
 
-// ÊóÀà
+// é¼ ç±»
 class Rat : private Animal
 {
-// ¼Ì³ĞÏÂÀ´µÄÊôĞÔ
+// ç»§æ‰¿ä¸‹æ¥çš„å±æ€§
 //private:
 //    int year;
 //private:
@@ -89,11 +89,11 @@ public:
     Rat()
     {
         year = 2020;
-        name = "Êó";
+        name = "é¼ ";
     }
     void print()
     {
-        cout << "ĞÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
 };
 
@@ -108,24 +108,24 @@ void main017()
     Rat rat;
     rat.print();
 
-    // x86 28×Ö½Ú x64 40×Ö½Ú
+    // x86 28å­—èŠ‚ x64 40å­—èŠ‚
     cout << "sizeof(string):" << sizeof(string) << endl;
     cout << "sizeof(Animal):" << sizeof(Animal) << endl;
-    // ¸¸ÀàÖĞµÄ·Ç¾²Ì¬ÊôĞÔ£¬Ò²±»×ÓÀà¼Ì³ĞÁË£¬µ«ÊÇ±»Òş²ØÁË£¬ÎŞ·¨·ÃÎÊ
+    // çˆ¶ç±»ä¸­çš„éé™æ€å±æ€§ï¼Œä¹Ÿè¢«å­ç±»ç»§æ‰¿äº†ï¼Œä½†æ˜¯è¢«éšè—äº†ï¼Œæ— æ³•è®¿é—®
     cout << "sizeof(Cat):" << sizeof(Cat) << endl;
-    // ¿ÉÒÔÊ¹ÓÃÃüÁîÀ´²éÑ¯ ¶ÔÏóÄ£ĞÍ
-    // cl /d1 reportSingleClassLayoutÀàÃû cppÎÄ¼şÃû
-    // ÀıÈç cl /d1 reportSingleClassLayoutDog "017-¼Ì³Ğ-»ù´¡.cpp"
-    // ÏÔÊ¾ÈçÏÂ
-    //class Dog       size(36): ×Ü¹²Õ¼ÓÃ36×Ö½Ú£¬Êµ¼ÊÕ¼ÓÃ40×Ö½Ú(stringÉÙËã4×Ö½Ú)
+    // å¯ä»¥ä½¿ç”¨å‘½ä»¤æ¥æŸ¥è¯¢ å¯¹è±¡æ¨¡å‹
+    // cl /d1 reportSingleClassLayoutç±»å cppæ–‡ä»¶å
+    // ä¾‹å¦‚ cl /d1 reportSingleClassLayoutDog "017-ç»§æ‰¿-åŸºç¡€.cpp"
+    // æ˜¾ç¤ºå¦‚ä¸‹
+    //class Dog       size(36): æ€»å…±å ç”¨36å­—èŠ‚ï¼Œå®é™…å ç”¨40å­—èŠ‚(stringå°‘ç®—4å­—èŠ‚)
     //        +---
-    // 0      | +--- (base class Animal) ¼Ì³Ğ¸¸ÀàAnimal
-    // 0      | | year ¸¸ÀàintÊôĞÔÕ¼ÓÃ4×Ö½Ú(4-0=4)
-    // 4      | | ?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@ name ¸¸ÀàstringÊôĞÔÕ¼ÓÃ24×Ö½Ú(28-4=24)£¬Êµ¼ÊÕ¼ÓÃ28×Ö½Ú(stringÉÙËã4×Ö½Ú)
-    //28      | | gender ¸¸ÀàboolÊôĞÔÕ¼ÓÃ4×Ö½Ú(32-28=4)
-    //        | | <alignment member> (size=3) ×Ü¹²3¸öÊôĞÔ
+    // 0      | +--- (base class Animal) ç»§æ‰¿çˆ¶ç±»Animal
+    // 0      | | year çˆ¶ç±»intå±æ€§å ç”¨4å­—èŠ‚(4-0=4)
+    // 4      | | ?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@ name çˆ¶ç±»stringå±æ€§å ç”¨24å­—èŠ‚(28-4=24)ï¼Œå®é™…å ç”¨28å­—èŠ‚(stringå°‘ç®—4å­—èŠ‚)
+    //28      | | gender çˆ¶ç±»boolå±æ€§å ç”¨4å­—èŠ‚(32-28=4)
+    //        | | <alignment member> (size=3) æ€»å…±3ä¸ªå±æ€§
     //        | +---
-    //32      | a ×Ô¼ºintÊôĞÔÕ¼ÓÃ4×Ö½Ú(36-32=4)
+    //32      | a è‡ªå·±intå±æ€§å ç”¨4å­—èŠ‚(36-32=4)
     //        +---
     cout << "sizeof(Dog):" << sizeof(Dog) << endl;
 }

@@ -8,16 +8,16 @@ public:
     T t;
     void showType()
     {
-        cout << "Base31ÀàĞÍT£º" << typeid(T).name() << endl;
+        cout << "Base31ç±»å‹Tï¼š" << typeid(T).name() << endl;
     }
 };
 
-// ×ÓÀà¼Ì³ĞÀàÄ£°å£¬ĞèÒªÖ¸¶¨Êı¾İÀàĞÍ
+// å­ç±»ç»§æ‰¿ç±»æ¨¡æ¿ï¼Œéœ€è¦æŒ‡å®šæ•°æ®ç±»å‹
 class Son31 :public Base31<int>
 {
 };
 
-// ×ÓÀà²»Ö¸¶¨Êı¾İÀàĞÍ£¬¿ÉÒÔ°Ñ×ÓÀàÒ²±ä³ÉÀàÄ£°å
+// å­ç±»ä¸æŒ‡å®šæ•°æ®ç±»å‹ï¼Œå¯ä»¥æŠŠå­ç±»ä¹Ÿå˜æˆç±»æ¨¡æ¿
 template<class T1, class T2>
 class Son32 :public Base31<T1>
 {
@@ -25,7 +25,7 @@ public:
     T2 t;
     void showType2()
     {
-        cout << "Son33ÀàĞÍT2£º" << typeid(T2).name() << endl;
+        cout << "Son33ç±»å‹T2ï¼š" << typeid(T2).name() << endl;
     }
 };
 

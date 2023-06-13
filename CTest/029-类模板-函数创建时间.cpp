@@ -28,7 +28,7 @@ public:
 
     void fun1()
     {
-        // 类模板中才函数，在调用时，才生成
+        // 绫绘ā鏉夸腑鎵嶅嚱鏁帮紝鍦ㄨ皟鐢ㄦ椂锛屾墠鐢熸垚
         obj.print1();
     }
     void fun2()
@@ -41,7 +41,7 @@ void main029()
 {
     Person29<Temp1> p;
     p.fun1();
-    // Temp1类中没有print2方法，编译时不会出错，但是运行会报错
+    // Temp1绫讳腑娌℃湁print2鏂规硶锛岀紪璇戞椂涓嶄細鍑洪敊锛屼絾鏄繍琛屼細鎶ラ敊
     // p.fun2();
 
 }

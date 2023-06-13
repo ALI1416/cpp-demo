@@ -1,22 +1,22 @@
 #include<iostream>
 using namespace std;
 
-// ¶àÌ¬
-// ¾²Ì¬¶àÌ¬£ºº¯ÊıÖØÔØ¡¢ÔËËã·ûÖØÔØ
-//          º¯ÊıµØÖ·Ôç°ó¶¨->±àÒë½×¶ÎÈ·¶¨º¯ÊıµØÖ·
-// ¶¯Ì¬¶àÌ¬£º×ÓÀà¡¢Ğéº¯Êı
-//          º¯ÊıµØÖ·Íí°ó¶¨->ÔËĞĞ½×¶ÎÈ·¶¨º¯ÊıµØÖ·
+// å¤šæ€
+// é™æ€å¤šæ€ï¼šå‡½æ•°é‡è½½ã€è¿ç®—ç¬¦é‡è½½
+//          å‡½æ•°åœ°å€æ—©ç»‘å®š->ç¼–è¯‘é˜¶æ®µç¡®å®šå‡½æ•°åœ°å€
+// åŠ¨æ€å¤šæ€ï¼šå­ç±»ã€è™šå‡½æ•°
+//          å‡½æ•°åœ°å€æ™šç»‘å®š->è¿è¡Œé˜¶æ®µç¡®å®šå‡½æ•°åœ°å€
 class Animal22
 {
 public:
     void speak()
     {
-        cout << "¶¯ÎïÔÚËµ»°" << endl;
+        cout << "åŠ¨ç‰©åœ¨è¯´è¯" << endl;
     }
-    // Ğéº¯Êı
+    // è™šå‡½æ•°
     virtual void speak2()
     {
-        cout << "¶¯ÎïÔÚËµ»°2" << endl;
+        cout << "åŠ¨ç‰©åœ¨è¯´è¯2" << endl;
     }
 };
 
@@ -25,23 +25,23 @@ class Cat22 : public Animal22
 public:
     void speak()
     {
-        cout << "Ğ¡Ã¨ÔÚËµ»°" << endl;
+        cout << "å°çŒ«åœ¨è¯´è¯" << endl;
     }
-    // ÖØĞ´Ğéº¯Êı
+    // é‡å†™è™šå‡½æ•°
     virtual void speak2()
     {
-        cout << "Ğ¡Ã¨ÔÚËµ»°2" << endl;
+        cout << "å°çŒ«åœ¨è¯´è¯2" << endl;
     }
 };
 
-// ÔÚ±àÒë½×¶ÎÒÑ°ó¶¨º¯ÊıµØÖ·£¬ÎŞÂÛÈçºÎµ÷ÓÃ£¬¶¼Êä³öAnimal22µÄÄÚÈİ
+// åœ¨ç¼–è¯‘é˜¶æ®µå·²ç»‘å®šå‡½æ•°åœ°å€ï¼Œæ— è®ºå¦‚ä½•è°ƒç”¨ï¼Œéƒ½è¾“å‡ºAnimal22çš„å†…å®¹
 void doSpeak(Animal22& animal)
 {
     animal.speak();
 }
 
-// ¶¯Ì¬¶àÌ¬
-// ×ÓÀà¼Ì³Ğ¸¸Àà£¬ÖØĞ´¸¸ÀàµÄĞéº¯Êı
+// åŠ¨æ€å¤šæ€
+// å­ç±»ç»§æ‰¿çˆ¶ç±»ï¼Œé‡å†™çˆ¶ç±»çš„è™šå‡½æ•°
 void doSpeak2(Animal22& animal)
 {
     animal.speak2();
@@ -53,16 +53,16 @@ void main021()
     doSpeak(cat);
     doSpeak2(cat);
     cout << "sizeof(Cat22):" << sizeof(Cat22) << endl;
-    // cl /d1 reportSingleClassLayoutCat22 "021-¶àÌ¬-Ğéº¯Êı.cpp"
+    // cl /d1 reportSingleClassLayoutCat22 "021-å¤šæ€-è™šå‡½æ•°.cpp"
     //class Cat22     size(4):
     //        +---
     // 0      | +--- (base class Animal22)
-    // 0      | | {vfptr} virtual funcation pointer Ğéº¯ÊıÖ¸Õë£¬Õ¼ÓÃ4×Ö½Ú£¬Ö¸Ïòvftable
+    // 0      | | {vfptr} virtual funcation pointer è™šå‡½æ•°æŒ‡é’ˆï¼Œå ç”¨4å­—èŠ‚ï¼ŒæŒ‡å‘vftable
     //        | +---
     //        +---
-    //Cat22::$vftable@: virtual funcation table Ğéº¯Êı±í
+    //Cat22::$vftable@: virtual funcation table è™šå‡½æ•°è¡¨
     //        | &Cat22_meta
     //        |  0
-    // 0      | &Cat22::speak2 Cat22ÖØĞ´µÄĞéº¯Êıspeak2
+    // 0      | &Cat22::speak2 Cat22é‡å†™çš„è™šå‡½æ•°speak2
     //Cat22::speak2 this adjustor: 0
 }

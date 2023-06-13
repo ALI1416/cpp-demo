@@ -14,7 +14,7 @@ void main035()
     a1.push(3);
     a1.push(4);
     a1.push(5);
-    // ²åÈëÊ§°Ü
+    // æ’å…¥å¤±è´¥
     a1.push(6);
     try {
         cout << a1.pop() << endl;
@@ -22,24 +22,24 @@ void main035()
         a1.del();
         a1.del();
         cout << a1.pop() << endl;
-        // µ¯³öÒì³£
+        // å¼¹å‡ºå¼‚å¸¸
         cout << a1.pop() << endl;
     }
-    // ²¶»ñÒì³£×Ö·û´®
+    // æ•è·å¼‚å¸¸å­—ç¬¦ä¸²
     catch (const char* c)
     {
-        cout << "Òì³££º" << c << endl;
+        cout << "å¼‚å¸¸ï¼š" << c << endl;
     }
 
     a1.push(1);
     a1.push(2);
     a1.push(3);
     cout << a1[1] << endl;
-    // ĞŞ¸ÄÏÂ±ê¶ÔÓ¦µÄÖµ
+    // ä¿®æ”¹ä¸‹æ ‡å¯¹åº”çš„å€¼
     a1[1] = 100;
     cout << a1[1] << endl;
 
-    cout << "ÈİÁ¿£º" << a1.getCapacity() << endl;
-    cout << "³¤¶È£º" << a1.getSize() << endl;
+    cout << "å®¹é‡ï¼š" << a1.getCapacity() << endl;
+    cout << "é•¿åº¦ï¼š" << a1.getSize() << endl;
 
 }

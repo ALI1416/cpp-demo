@@ -1,37 +1,37 @@
 #include<iostream>
-// µ¼ÈëvectorÊý×é¿â
+// å¯¼å…¥vectoræ•°ç»„åº“
 #include<vector>
-// µ¼Èë±ê×¼Ëã·¨¿â
+// å¯¼å…¥æ ‡å‡†ç®—æ³•åº“
 #include<algorithm>
 using namespace std;
 
-/* »ù±¾¸ÅÄî */
-// STL (Standard Template Library) ±ê×¼Ä£°å¿â
-// ¹ãÒå·ÖÎª3ÖÖ£ºÈÝÆ÷(container)¡¢Ëã·¨(algorithm)¡¢µü´úÆ÷(iterator)
-// `ÈÝÆ÷`ºÍ`Ëã·¨`Ö®¼ä£¬Í¨¹ý`µü´úÆ÷`½øÐÐÎÞ·ìÁ¬½Ó
-// STL¼¸ºõËùÓÐµÄ´úÂë¶¼²ÉÓÃÁËÄ£°åÀà»òÕßÄ£°åº¯Êý
-/* Áù´ó×é¼þ */
-// 1¡¢ÈÝÆ÷£ºÊý¾Ý½á¹¹¡£Èçstring[×Ö·û´®]¡¢vector[µ¥¶ËÊý×é]¡¢deque[Ë«¶ËÊý×é]¡¢stack[Õ»]¡¢queue[¶ÓÁÐ]¡¢list[Ë«ÏòÑ­»·Á´±í]¡¢pari[¶Ô×é]¡¢(multi)set[(¿ÉÖØ¸´)¼¯ºÏ]¡¢(multi)map[(¿ÉÖØ¸´)Ó³Éä]µÈ
-// 2¡¢Ëã·¨£º³£ÓÃËã·¨¡£Èçfor_each[±éÀú]¡¢transform[×ªÒÆ]¡¢find(_if)[(Ìõ¼þ)²éÕÒ]¡¢adjacent_find[ÏàÁÚÔªËØ²éÕÒ]¡¢binary_search[´æÔÚ]¡¢count(_if)[(Ìõ¼þ)¼ÆÊý]¡¢sort[ÅÅÐò]¡¢merge[ºÏ²¢]¡¢reverse[·´×ª]¡¢random_shuffle[Ï´ÅÆ]¡¢copy[¿½±´]¡¢replace(_if)[(Ìõ¼þ)Ìæ»»]¡¢swap[½»»»]¡¢accumulate[ÀÛ¼Æ]¡¢fill[Ìî³ä]¡¢set_intersection[½»¼¯]¡¢set_union[²¢¼¯]¡¢set_difference[²î¼¯]µÈ
-// 3¡¢µü´úÆ÷£º°çÑÝÁË`ÈÝÆ÷`ºÍ`Ëã·¨`Ö®¼äµÄ½ººÏ¼Á
-// 4¡¢·Âº¯Êý£ºÐÐÎªÀàËÆ`º¯Êý`£¬¿É×÷ÎªËã·¨µÄÄ³ÖÖ²ßÂÔ
-// 5¡¢ÊÊÅäÆ÷£ºÒ»ÖÖÓÃÀ´ÐÞÊÎ`ÈÝÆ÷`»òÕß`·Âº¯Êý`»òÕß`µü´úÆ÷½Ó¿Ú`µÄ¶«Î÷
-// 6¡¢¿Õ¼äÅäÖÃÆ÷£º¸ºÔð¿Õ¼äÅäÖÃºÍ¹ÜÀí
-/* ÈÝÆ÷ */
-// - ÐòÁÐÊ½ÈÝÆ÷£ºÓÐÐò
-// - ¹ØÁªÊ½ÈÝÆ÷£ºÎÞÐò£¬¶þ²æÊ÷´æ´¢
-/* Ëã·¨ */
-// - ÖÊ±äËã·¨£º»á¸Ä±äÔªËØÄÚÈÝ
-// - ·ÇÖÊ±äËã·¨£º²»»á¸Ä±äÔªËØÄÚÈÝ
-/* µü´úÆ÷ */
-// 1¡¢ÊäÈëµü´úÆ÷  Ö»¶Á  ++¡¢==¡¢!=
-// 2¡¢Êä³öµü´úÆ÷  Ö»Ð´  ++
-// 3¡¢Ç°Ïòµü´úÆ÷  ¶ÁÐ´¡¢Ç°ÍÆ   ++¡¢==¡¢!=
-// 4¡¢Ë«Ïòµü´úÆ÷  ¶ÁÐ´¡¢Ç°ºóÍÆ  ++¡¢--
-// 5¡¢Ëæ»ú·ÃÎÊµü´úÆ÷    ¶ÁÐ´¡¢ÌøÔ¾ÍÆ½ø     ++¡¢--¡¢[n]¡¢-n¡¢<¡¢<=¡¢>¡¢>=
-// ÈÝÆ÷ÖÐ³£ÓÃ`Ë«Ïòµü´úÆ÷`ºÍ`Ëæ»ú·ÃÎÊµü´úÆ÷`
+/* åŸºæœ¬æ¦‚å¿µ */
+// STL (Standard Template Library) æ ‡å‡†æ¨¡æ¿åº“
+// å¹¿ä¹‰åˆ†ä¸º3ç§ï¼šå®¹å™¨(container)ã€ç®—æ³•(algorithm)ã€è¿­ä»£å™¨(iterator)
+// `å®¹å™¨`å’Œ`ç®—æ³•`ä¹‹é—´ï¼Œé€šè¿‡`è¿­ä»£å™¨`è¿›è¡Œæ— ç¼è¿žæŽ¥
+// STLå‡ ä¹Žæ‰€æœ‰çš„ä»£ç éƒ½é‡‡ç”¨äº†æ¨¡æ¿ç±»æˆ–è€…æ¨¡æ¿å‡½æ•°
+/* å…­å¤§ç»„ä»¶ */
+// 1ã€å®¹å™¨ï¼šæ•°æ®ç»“æž„ã€‚å¦‚string[å­—ç¬¦ä¸²]ã€vector[å•ç«¯æ•°ç»„]ã€deque[åŒç«¯æ•°ç»„]ã€stack[æ ˆ]ã€queue[é˜Ÿåˆ—]ã€list[åŒå‘å¾ªçŽ¯é“¾è¡¨]ã€pari[å¯¹ç»„]ã€(multi)set[(å¯é‡å¤)é›†åˆ]ã€(multi)map[(å¯é‡å¤)æ˜ å°„]ç­‰
+// 2ã€ç®—æ³•ï¼šå¸¸ç”¨ç®—æ³•ã€‚å¦‚for_each[éåŽ†]ã€transform[è½¬ç§»]ã€find(_if)[(æ¡ä»¶)æŸ¥æ‰¾]ã€adjacent_find[ç›¸é‚»å…ƒç´ æŸ¥æ‰¾]ã€binary_search[å­˜åœ¨]ã€count(_if)[(æ¡ä»¶)è®¡æ•°]ã€sort[æŽ’åº]ã€merge[åˆå¹¶]ã€reverse[åè½¬]ã€random_shuffle[æ´—ç‰Œ]ã€copy[æ‹·è´]ã€replace(_if)[(æ¡ä»¶)æ›¿æ¢]ã€swap[äº¤æ¢]ã€accumulate[ç´¯è®¡]ã€fill[å¡«å……]ã€set_intersection[äº¤é›†]ã€set_union[å¹¶é›†]ã€set_difference[å·®é›†]ç­‰
+// 3ã€è¿­ä»£å™¨ï¼šæ‰®æ¼”äº†`å®¹å™¨`å’Œ`ç®—æ³•`ä¹‹é—´çš„èƒ¶åˆå‰‚
+// 4ã€ä»¿å‡½æ•°ï¼šè¡Œä¸ºç±»ä¼¼`å‡½æ•°`ï¼Œå¯ä½œä¸ºç®—æ³•çš„æŸç§ç­–ç•¥
+// 5ã€é€‚é…å™¨ï¼šä¸€ç§ç”¨æ¥ä¿®é¥°`å®¹å™¨`æˆ–è€…`ä»¿å‡½æ•°`æˆ–è€…`è¿­ä»£å™¨æŽ¥å£`çš„ä¸œè¥¿
+// 6ã€ç©ºé—´é…ç½®å™¨ï¼šè´Ÿè´£ç©ºé—´é…ç½®å’Œç®¡ç†
+/* å®¹å™¨ */
+// - åºåˆ—å¼å®¹å™¨ï¼šæœ‰åº
+// - å…³è”å¼å®¹å™¨ï¼šæ— åºï¼ŒäºŒå‰æ ‘å­˜å‚¨
+/* ç®—æ³• */
+// - è´¨å˜ç®—æ³•ï¼šä¼šæ”¹å˜å…ƒç´ å†…å®¹
+// - éžè´¨å˜ç®—æ³•ï¼šä¸ä¼šæ”¹å˜å…ƒç´ å†…å®¹
+/* è¿­ä»£å™¨ */
+// 1ã€è¾“å…¥è¿­ä»£å™¨  åªè¯»  ++ã€==ã€!=
+// 2ã€è¾“å‡ºè¿­ä»£å™¨  åªå†™  ++
+// 3ã€å‰å‘è¿­ä»£å™¨  è¯»å†™ã€å‰æŽ¨   ++ã€==ã€!=
+// 4ã€åŒå‘è¿­ä»£å™¨  è¯»å†™ã€å‰åŽæŽ¨  ++ã€--
+// 5ã€éšæœºè®¿é—®è¿­ä»£å™¨    è¯»å†™ã€è·³è·ƒæŽ¨è¿›     ++ã€--ã€[n]ã€-nã€<ã€<=ã€>ã€>=
+// å®¹å™¨ä¸­å¸¸ç”¨`åŒå‘è¿­ä»£å™¨`å’Œ`éšæœºè®¿é—®è¿­ä»£å™¨`
 
-// ´òÓ¡
+// æ‰“å°
 void myPrint(int v)
 {
     cout << v << endl;
@@ -39,22 +39,22 @@ void myPrint(int v)
 
 void main036()
 {
-    // ´´½¨vector`ÈÝÆ÷`
+    // åˆ›å»ºvector`å®¹å™¨`
     vector<int> v;
 
-    // ÏòÈÝÆ÷ÖÐ²åÈëÊý¾Ý
+    // å‘å®¹å™¨ä¸­æ’å…¥æ•°æ®
     v.push_back(11);
     v.push_back(12);
     v.push_back(13);
     v.push_back(14);
 
-    // Í¨¹ý`µü´úÆ÷`·ÃÎÊ`ÈÝÆ÷`ÖÐµÄÊý¾Ý
-    // ÆðÊ¼µü´úÆ÷£¬Ö¸ÏòÈÝÆ÷ÖÐµÄµÚÒ»¸öÔªËØ(·µ»ØÖ¸Õë)
+    // é€šè¿‡`è¿­ä»£å™¨`è®¿é—®`å®¹å™¨`ä¸­çš„æ•°æ®
+    // èµ·å§‹è¿­ä»£å™¨ï¼ŒæŒ‡å‘å®¹å™¨ä¸­çš„ç¬¬ä¸€ä¸ªå…ƒç´ (è¿”å›žæŒ‡é’ˆ)
     vector<int>::iterator itBegin = v.begin();
-    // ½áÊøµü´úÆ÷£¬Ö¸ÏòÈÝÆ÷ÖÐµÄ×îºóÒ»¸öÔªËØµÄÏÂÒ»¸öÎ»ÖÃ
+    // ç»“æŸè¿­ä»£å™¨ï¼ŒæŒ‡å‘å®¹å™¨ä¸­çš„æœ€åŽä¸€ä¸ªå…ƒç´ çš„ä¸‹ä¸€ä¸ªä½ç½®
     vector<int>::iterator itEnd = v.end();
 
-    // µÚÒ»ÖÖ±éÀú·½Ê½,while
+    // ç¬¬ä¸€ç§éåŽ†æ–¹å¼,while
     cout << "while" << endl;
     while (itBegin != itEnd)
     {
@@ -62,16 +62,16 @@ void main036()
         itBegin++;
     }
 
-    // µÚ¶þÖÖ±éÀú·½Ê½,for
+    // ç¬¬äºŒç§éåŽ†æ–¹å¼,for
     cout << "for" << endl;
     for (vector<int>::iterator it = v.begin(); it != v.end(); it++)
     {
         cout << *it << endl;
     }
 
-    // µÚÈýÖÖ±éÀú·½Ê½,for_each(algorithm¿âÌá¹©µÄËã·¨)
+    // ç¬¬ä¸‰ç§éåŽ†æ–¹å¼,for_each(algorithmåº“æä¾›çš„ç®—æ³•)
     cout << "for_each" << endl;
-    // ÆðÊ¼£¬½áÊø+1£¬±éÀú·½·¨
+    // èµ·å§‹ï¼Œç»“æŸ+1ï¼ŒéåŽ†æ–¹æ³•
     for_each(v.begin(), v.end(), myPrint);
 
 }

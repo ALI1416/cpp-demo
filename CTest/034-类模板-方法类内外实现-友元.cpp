@@ -1,15 +1,15 @@
 #include<iostream>
 using namespace std;
 
-// ÉùÃ÷
+// å£°æ˜
 template<class NameType, class YearType>
 class Person35;
 
-// È«¾ÖÓÑÔªº¯Êı-ÀàÍâÊµÏÖ
+// å…¨å±€å‹å…ƒå‡½æ•°-ç±»å¤–å®ç°
 template<class NameType, class YearType>
 void print2(Person35<NameType, YearType> p)
 {
-    cout << "È«¾ÖÓÑÔªº¯Êı-ÀàÍâÊµÏÖ-ĞÕÃû£º" << p.name << "£¬³öÉúÄê£º" << p.year << endl;
+    cout << "å…¨å±€å‹å…ƒå‡½æ•°-ç±»å¤–å®ç°-å§“åï¼š" << p.name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << p.year << endl;
 }
 
 template<class NameType, class YearType>
@@ -21,14 +21,14 @@ private:
 public:
     Person35(NameType name, YearType year) :name(name), year(year) {}
 
-    // È«¾ÖÓÑÔªº¯Êı-ÀàÄÚÊµÏÖ
+    // å…¨å±€å‹å…ƒå‡½æ•°-ç±»å†…å®ç°
     friend void print(Person35<NameType, YearType> p)
     {
-        cout << "È«¾ÖÓÑÔªº¯Êı-ÀàÄÚÊµÏÖ-ĞÕÃû£º" << p.name << "£¬³öÉúÄê£º" << p.year << endl;
+        cout << "å…¨å±€å‹å…ƒå‡½æ•°-ç±»å†…å®ç°-å§“åï¼š" << p.name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << p.year << endl;
     }
 
-    // È«¾ÖÓÑÔªº¯Êı-ÀàÄÚÉùÃ÷
-    // ĞèÒª¼ÓÉÏ¿Õ²ÎÊıÁĞ±í£¬ÉùÃ÷ËüÊÇÄ£°åº¯Êı
+    // å…¨å±€å‹å…ƒå‡½æ•°-ç±»å†…å£°æ˜
+    // éœ€è¦åŠ ä¸Šç©ºå‚æ•°åˆ—è¡¨ï¼Œå£°æ˜å®ƒæ˜¯æ¨¡æ¿å‡½æ•°
     friend void print2<>(Person35<NameType, YearType> p);
 
 };

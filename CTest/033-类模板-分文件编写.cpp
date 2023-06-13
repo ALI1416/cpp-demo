@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
-// 如果类模板分文件编写，只能包含cpp文件，h文件无效
+// 濡傛灉绫绘ā鏉垮垎鏂囦欢缂栧啓锛屽彧鑳藉寘鍚玞pp鏂囦欢锛宧鏂囦欢鏃犳晥
 #include"lib/person33.cpp"
-// 把声明和实现，放到同一个文件里，命名为hpp文件
+// 鎶婂０鏄庡拰瀹炵幇锛屾斁鍒板悓涓�涓枃浠堕噷锛屽懡鍚嶄负hpp鏂囦欢
 #include"lib/person34.hpp"
 
 void main033()

@@ -2,7 +2,7 @@
 #ifndef __PERSON33_H__
 #define __PERSON33_H__
 
-//ÉùÃ÷
+//å£°æ˜Ž
 template<class NameType, class YearType>
 class Person33
 {

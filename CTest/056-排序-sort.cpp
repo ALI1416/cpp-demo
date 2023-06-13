@@ -21,11 +21,11 @@ void main056()
     v.push_back(5);
     v.push_back(3);
     v.push_back(1);
-    // 默认升序排列(会改变原数据)
+    // 榛樿鍗囧簭鎺掑垪(浼氭敼鍙樺師鏁版嵁)
     // void sort(iterator start, iterator end);
     sort(v.begin(), v.end());
     print056(v);
-    // 降序排列：使用functional库的greater方法
+    // 闄嶅簭鎺掑垪锛氫娇鐢╢unctional搴撶殑greater鏂规硶
     sort(v.begin(), v.end(), greater<int>());
     print056(v);
 }

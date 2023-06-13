@@ -2,49 +2,49 @@
 #include<queue>
 using namespace std;
 
-// ¶ÓÁĞ(Queue) ÏÈ½øÏÈ³ö FIFO(First In First Out)
+// é˜Ÿåˆ—(Queue) å…ˆè¿›å…ˆå‡º FIFO(First In First Out)
 void main041()
 {
-    /* ¹¹Ôì */
-    // ÎŞ²Î(Ä¬ÈÏ)
+    /* æ„é€  */
+    // æ— å‚(é»˜è®¤)
     // queue<T>();
     queue<int> q1;
     q1.push(123);
     cout << q1.front() << endl;
-    // ¿½±´
+    // æ‹·è´
     // queue<T>(const queue<T>& q);
     queue<int> q2(q1);
     cout << q2.front() << endl;
 
-    /* ¸³Öµ */
-    // queue¸³Öµ¸øµ±Ç°queue
+    /* èµ‹å€¼ */
+    // queueèµ‹å€¼ç»™å½“å‰queue
     // queue& operator=(const queue& q);
     queue<int> q3 = q2;
     cout << q3.front() << endl;
 
-    /* ´æÈ¡ */
+    /* å­˜å– */
     queue<int> q4;
-    // Ñ¹ÈëÔªËØ
+    // å‹å…¥å…ƒç´ 
     // void push(T& value);
     q4.push(123);
     q4.push(456);
     q4.push(789);
-    // È¡³öÍ·²¿ÔªËØ
+    // å–å‡ºå¤´éƒ¨å…ƒç´ 
     // T& front();
     cout << q4.front() << endl;
-    // È¡³öÎ²²¿ÔªËØ
+    // å–å‡ºå°¾éƒ¨å…ƒç´ 
     // T& back();
     cout << q4.back() << endl;
-    // µ¯³öÍ·²¿ÔªËØ
+    // å¼¹å‡ºå¤´éƒ¨å…ƒç´ 
     // void pop();
     q4.pop();
     cout << q4.front() << endl;
 
-    /* ´óĞ¡²Ù×÷ */
+    /* å¤§å°æ“ä½œ */
     queue<int> q5;
-    // ÅĞ¶Ï¶ÓÁĞÊÇ·ñÎª¿Õ
+    // åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
     // bool empty();
-    // ·µ»Ø¶ÓÁĞµÄ³¤¶È
+    // è¿”å›é˜Ÿåˆ—çš„é•¿åº¦
     // int size();
     cout << "empty:" << q5.empty() << ",size:" << q5.size() << endl;
     q5.push(1);

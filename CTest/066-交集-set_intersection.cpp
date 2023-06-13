@@ -22,9 +22,9 @@ void main066()
         v2.push_back(i + 5);
     }
     vector<int> v3;
-    // ÈİÁ¿×î´óÇé¿ö£º´óÈİÆ÷°üº¬Ğ¡ÈİÆ÷¡£×î´óÖµ£ºĞ¡ÈİÆ÷ÈİÁ¿
+    // å®¹é‡æœ€å¤§æƒ…å†µï¼šå¤§å®¹å™¨åŒ…å«å°å®¹å™¨ã€‚æœ€å¤§å€¼ï¼šå°å®¹å™¨å®¹é‡
     v3.resize(min(v.size(), v2.size()));
-    // ·µ»ØÄ¿±êÔªËØµÄ×îºóÒ»¸öÎ»ÖÃ+1
+    // è¿”å›ç›®æ ‡å…ƒç´ çš„æœ€åä¸€ä¸ªä½ç½®+1
     // iterator set_intersection(iterator start, iterator end, iterator start2, iterator end2, iterator startDest);
     vector<int>::iterator itEnd = set_intersection(v.begin(), v.end(), v2.begin(), v2.end(), v3.begin());
     print066(v3);

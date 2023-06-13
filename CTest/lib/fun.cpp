@@ -1,35 +1,35 @@
 #include<iostream>
 using namespace std;
 
-// ¶¨Òåº¯Êý
+// å®šä¹‰å‡½æ•°
 void print(int num)
 {
-    cout << "ÊäÈëµÄÊý×ÖÎª£º" << num << endl;
+    cout << "è¾“å…¥çš„æ•°å­—ä¸ºï¼š" << num << endl;
 }
 
-// ½»»»-Öµ´«µÝ
+// äº¤æ¢-å€¼ä¼ é€’
 void swap01(int num1, int num2)
 {
     int temp = num1;
     num1 = num2;
     num2 = temp;
-    cout << "swap01£ºnum1£º" << num1 << "£¬num2£º" << num2 << endl;
+    cout << "swap01ï¼šnum1ï¼š" << num1 << "ï¼Œnum2ï¼š" << num2 << endl;
 }
 
-// ½»»»-µØÖ·´«µÝ
+// äº¤æ¢-åœ°å€ä¼ é€’
 void swap02(int* num1, int* num2)
 {
     int temp = *num1;
     *num1 = *num2;
     *num2 = temp;
-    cout << "swap02£ºnum1£º" << *num1 << "£¬num2£º" << *num2 << endl;
+    cout << "swap02ï¼šnum1ï¼š" << *num1 << "ï¼Œnum2ï¼š" << *num2 << endl;
 }
 
-// ½»»»-ÒýÓÃ´«µÝ
+// äº¤æ¢-å¼•ç”¨ä¼ é€’
 void swap03(int& num1, int& num2)
 {
     int temp = num1;
     num1 = num2;
     num2 = temp;
-    cout << "swap03£ºnum1£º" << num1 << "£¬num2£º" << num2 << endl;
+    cout << "swap03ï¼šnum1ï¼š" << num1 << "ï¼Œnum2ï¼š" << num2 << endl;
 }

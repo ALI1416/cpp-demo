@@ -14,14 +14,14 @@ void print059(vector<int> v)
 
 void main059()
 {
-    // Ëæ»úÖÖ×Ó£¬ĞèÒªÒıÈëctime¿â
+    // éšæœºç§å­ï¼Œéœ€è¦å¼•å…¥ctimeåº“
     srand((unsigned int)time(NULL));
     vector<int> v;
     for (int i = 0; i < 10; i++)
     {
         v.push_back(i);
     }
-    // Ï´ÅÆ
+    // æ´—ç‰Œ
     // void reverse(iterator start, iterator end);
     random_shuffle(v.begin(), v.end());
     print059(v);

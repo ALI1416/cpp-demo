@@ -23,6 +23,7 @@ void main062()
     {
         v.push_back(i);
     }
+    // 条件替换
     // void replace_if(iterator start, iterator end, function, T newValue);
     replace_if(v.begin(), v.end(), greate7, 200);
     print062(v);

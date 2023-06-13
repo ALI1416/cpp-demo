@@ -19,6 +19,7 @@ void main061()
         v.push_back(i);
     }
     v.push_back(2);
+    // 替换
     // void replace(iterator start, iterator end, T oldValue, T newValue);
     replace(v.begin(), v.end(), 2, 200);
     print061(v);

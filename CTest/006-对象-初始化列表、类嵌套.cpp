@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// ÊÖ»úÀà
+// æ‰‹æœºç±»
 class Phone
 {
 public:
@@ -15,27 +15,27 @@ public:
     string name;
     bool gender;
     int year;
-    // ÊÖ»úÀà
+    // æ‰‹æœºç±»
     Phone phone;
 
-    // ÆÕÍ¨³õÊ¼»¯²Ù×÷
+    // æ™®é€šåˆå§‹åŒ–æ“ä½œ
     //Person3(string name, bool gender, int year)
     //{
     //    this->name = name;
     //    this->gender = gender;
     //    this->year = year;
-    //    cout << this << " È«²Î¹¹Ôìº¯Êı" << endl;
+    //    cout << this << " å…¨å‚æ„é€ å‡½æ•°" << endl;
     //}
 
-    // ³õÊ¼»¯ÁĞ±í
+    // åˆå§‹åŒ–åˆ—è¡¨
     Person3(string name, bool gender, int year, string phoneName) :name(name), gender(gender), year(year), phone(phoneName)
     {
-        cout << "³õÊ¼»¯ÁĞ±í" << endl;
+        cout << "åˆå§‹åŒ–åˆ—è¡¨" << endl;
     }
 };
 
 void main006()
 {
     Person3 p1("ck", true, 1998, "iPhone 12 Pro Max");
-    cout << "ĞÕÃû£º" << p1.name << "£¬ĞÔ±ğ£º" << (p1.gender == true ? "ÄĞ" : "Å®") << "£¬³öÉúÄê£º" << p1.year << "£¬ÊÖ»ú£º" << p1.phone.name << endl;
+    cout << "å§“åï¼š" << p1.name << "ï¼Œæ€§åˆ«ï¼š" << (p1.gender == true ? "ç”·" : "å¥³") << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << p1.year << "ï¼Œæ‰‹æœºï¼š" << p1.phone.name << endl;
 }

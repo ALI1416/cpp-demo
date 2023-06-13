@@ -15,8 +15,8 @@ void main055()
     {
         v.push_back(i);
     }
-    // ·µ»Ø¸ù¾İÌõ¼şÕÒµ½µÄ¸öÊı
+    // è¿”å›æ ¹æ®æ¡ä»¶æ‰¾åˆ°çš„ä¸ªæ•°
     // int count_if(iterator begin, iterator end, function);
     int n = count_if(v.begin(), v.end(), greate6);
-    cout << "ÕÒµ½µÄ¸öÊı£º" << n << endl;
+    cout << "æ‰¾åˆ°çš„ä¸ªæ•°ï¼š" << n << endl;
 }

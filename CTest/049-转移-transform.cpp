@@ -20,12 +20,12 @@ void main049()
     {
         v.push_back(i);
     }
-    // Ä¿±êÈİÆ÷
+    // ç›®æ ‡å®¹å™¨
     vector<int> vTarget;
     vTarget.push_back(123);
-    // ĞèÒª¸øÄ¿±êÈİÆ÷ÌáÇ°·ÖÅä¿Õ¼ä
+    // éœ€è¦ç»™ç›®æ ‡å®¹å™¨æå‰åˆ†é…ç©ºé—´
     vTarget.resize(vTarget.size() + v.size());
-    // Ä¿±êÈİÆ÷Êı¾İ»á±»´ÓbeginDest¿ªÊ¼Ìæ»»
+    // ç›®æ ‡å®¹å™¨æ•°æ®ä¼šè¢«ä»beginDestå¼€å§‹æ›¿æ¢
     // void transform(iterator begin, iterator end, iterator beginDest, function);
     transform(v.begin(), v.end(), vTarget.begin() + 1, transform01);
     for_each(v.begin(), v.end(), print02);

@@ -5,7 +5,7 @@ using namespace std;
 class Person25
 {
 public:
-    // string»á³öÏÖÎÊÌâ
+    // stringä¼šå‡ºç°é—®é¢˜
     char name[32];
     int year;
     bool gender;
@@ -13,22 +13,22 @@ public:
 
 void main025()
 {
-    Person25 p = { "°¢Àê",1998,true };
-    // Ğ´ÎÄ¼ş
+    Person25 p = { "é˜¿ç‹¸",1998,true };
+    // å†™æ–‡ä»¶
     ofstream ofs;
     ofs.open("/2.txt", ios::out | ios::binary);
-    // ²ÎÊı(¶ÔÏóÒıÓÃ,¶ÔÏó´óĞ¡)
+    // å‚æ•°(å¯¹è±¡å¼•ç”¨,å¯¹è±¡å¤§å°)
     ofs.write((const char*)&p, sizeof(Person25));
     ofs.close();
 
-    // ¶ÁÎÄ¼ş
+    // è¯»æ–‡ä»¶
     ifstream ifs;
     ifs.open("/2.txt", ios::in | ios::binary);
     if (ifs.is_open())
     {
         Person25 p2;
         ifs.read((char*)&p2, sizeof(Person25));
-        cout << "ĞÕÃû£º" << p2.name << "£¬ĞÔ±ğ£º" << (p2.gender == true ? "ÄĞ" : "Å®") << "£¬³öÉúÄê£º" << p2.year << endl;
+        cout << "å§“åï¼š" << p2.name << "ï¼Œæ€§åˆ«ï¼š" << (p2.gender == true ? "ç”·" : "å¥³") << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << p2.year << endl;
     }
     ifs.close();
 }

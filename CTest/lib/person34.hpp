@@ -2,7 +2,7 @@
 #ifndef __PERSON34_H__
 #define __PERSON34_H__
 
-//ÉùÃ÷
+//å£°æ˜Ž
 template<class NameType, class YearType>
 class Person34
 {
@@ -15,7 +15,7 @@ public:
     void print();
 };
 
-// ÊµÏÖ
+// å®žçŽ°
 template<class NameType, class YearType>
 Person34<NameType, YearType>::Person34(NameType name, YearType year)
 {
@@ -26,7 +26,7 @@ Person34<NameType, YearType>::Person34(NameType name, YearType year)
 template<class NameType, class YearType>
 void Person34<NameType, YearType>::print()
 {
-    cout << "ÐÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+    cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
 }
 
 #endif

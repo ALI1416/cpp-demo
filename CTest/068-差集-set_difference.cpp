@@ -3,7 +3,7 @@
 #include<algorithm>
 using namespace std;
 
-void main()
+void main068()
 {
     vector<int> v;
     vector<int> v2;
@@ -13,9 +13,9 @@ void main()
         v2.push_back(i + 5);
     }
     vector<int> v3;
-    // ÈİÁ¿×î´óÇé¿ö£ººóÕß²»°üº¬Ç°Õß¡£×î´óÖµ£ºÇ°ÕßÈİÁ¿
+    // å®¹é‡æœ€å¤§æƒ…å†µï¼šåè€…ä¸åŒ…å«å‰è€…ã€‚æœ€å¤§å€¼ï¼šå‰è€…å®¹é‡
     v3.resize(v.size());
-    // ·µ»ØÄ¿±êÔªËØµÄ×îºóÒ»¸öÎ»ÖÃ+1(Á½¸ö¼¯ºÏ±ØĞëÊÇÓĞĞòµÄ)
+    // è¿”å›ç›®æ ‡å…ƒç´ çš„æœ€åä¸€ä¸ªä½ç½®+1(ä¸¤ä¸ªé›†åˆå¿…é¡»æ˜¯æœ‰åºçš„)
     // iterator set_difference(iterator start, iterator end, iterator start2, iterator end2, iterator startDest);
     vector<int>::iterator itEnd = set_difference(v.begin(), v.end(), v2.begin(), v2.end(), v3.begin());
     for (vector<int>::iterator it = v3.begin(); it != itEnd; it++)

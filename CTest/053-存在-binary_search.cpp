@@ -10,24 +10,24 @@ void main053()
     {
         v.insert(i);
     }
-    // Ö»ÊÊÓÃÓÚÓĞĞòĞòÁĞ
+    // åªé€‚ç”¨äºæœ‰åºåºåˆ—
     // bool binary_search(iterator begin, iterator end, T value);
     bool b = binary_search(v.begin(), v.end(), 2);
     if (b)
     {
-        cout << "ÕÒµ½ÔªËØ£¡" << endl;
+        cout << "æ‰¾åˆ°å…ƒç´ ï¼" << endl;
     }
     else
     {
-        cout << "Î´ÕÒµ½ÔªËØ£¡" <<  endl;
+        cout << "æœªæ‰¾åˆ°å…ƒç´ ï¼" <<  endl;
     }
     bool b2 = binary_search(v.begin(), v.end(), 12);
     if (b2)
     {
-        cout << "ÕÒµ½ÔªËØ£¡" << endl;
+        cout << "æ‰¾åˆ°å…ƒç´ ï¼" << endl;
     }
     else
     {
-        cout << "Î´ÕÒµ½ÔªËØ£¡" <<  endl;
+        cout << "æœªæ‰¾åˆ°å…ƒç´ ï¼" <<  endl;
     }
 }

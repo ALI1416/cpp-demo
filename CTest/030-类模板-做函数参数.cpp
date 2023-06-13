@@ -12,24 +12,24 @@ public:
 
     void print()
     {
-        cout << "ĞÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
 };
 
-// Ö¸¶¨´«ÈëÀàĞÍ(³£ÓÃ)
+// æŒ‡å®šä¼ å…¥ç±»å‹(å¸¸ç”¨)
 void fun1(Person30<string, int>& p)
 {
     p.print();
 }
 
-// ²ÎÊıÄ£°å»¯
+// å‚æ•°æ¨¡æ¿åŒ–
 template<typename T1, class T2>
 void fun2(Person30<T1, T2>& p)
 {
     p.print();
 }
 
-// ÀàÄ£°å»¯
+// ç±»æ¨¡æ¿åŒ–
 template<typename T>
 void fun3(T& p)
 {

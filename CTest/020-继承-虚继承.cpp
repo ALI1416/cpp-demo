@@ -1,54 +1,54 @@
 #include<iostream>
 using namespace std;
 
-// ÁâĞÎ¼Ì³Ğ
-//   ¶¯Îï
+// è±å½¢ç»§æ‰¿
+//   åŠ¨ç‰©
 //  /   \
-// ĞÜ    Ã¨
+// ç†Š    çŒ«
 //  \   /
-//   ĞÜÃ¨
+//   ç†ŠçŒ«
 
-// ¶¯Îï
+// åŠ¨ç‰©
 class Animal20
 {
 public:
     int year;
 };
 
-// ĞÜ
+// ç†Š
 class Bear20 : public Animal20
 {
 };
 
-// Ã¨
+// çŒ«
 class Cat20 : public Animal20
 {
 };
 
-// ĞÜÃ¨
+// ç†ŠçŒ«
 class Panda20 : public Bear20, public Cat20
 {
 };
 
 
-// ¶¯Îï
+// åŠ¨ç‰©
 class Animal21
 {
 public:
     int year;
 };
 
-// ĞÜ
-// Animal21ÎªĞé»ùÀà
+// ç†Š
+// Animal21ä¸ºè™šåŸºç±»
 class Bear21 : virtual public Animal21
 {
 };
 
-// Ã¨
+// çŒ«
 class Cat21 : virtual public Animal21
 {
 };
-// ĞÜÃ¨
+// ç†ŠçŒ«
 class Panda21 : public Bear21, public Cat21
 {
 };
@@ -56,10 +56,10 @@ class Panda21 : public Bear21, public Cat21
 void main020()
 {
     Panda20 p;
-    // ÓÉÓÚ¼Ì³ĞÓÚ2¸öÀà£¬ËùÒÔĞèÒª¼Ó×÷ÓÃÓò
+    // ç”±äºç»§æ‰¿äº2ä¸ªç±»ï¼Œæ‰€ä»¥éœ€è¦åŠ ä½œç”¨åŸŸ
     p.Bear20::year = 2020;
     p.Cat20::year = 2022;
-    // cl /d1 reportSingleClassLayoutPanda20 "020-¼Ì³Ğ-Ğé¼Ì³Ğ.cpp"
+    // cl /d1 reportSingleClassLayoutPanda20 "020-ç»§æ‰¿-è™šç»§æ‰¿.cpp"
     //class Panda20   size(8):
     //        +---
     // 0      | +--- (base class Bear20)
@@ -73,31 +73,31 @@ void main020()
     //        | | +---
     //        | +---
     //        +---
-    // Õ¼ÓÃÁË8¸ö×Ö½Ú£¬Bear20Õ¼4¸ö£¬Cat20Õ¼4¸ö
+    // å ç”¨äº†8ä¸ªå­—èŠ‚ï¼ŒBear20å 4ä¸ªï¼ŒCat20å 4ä¸ª
     cout << "sizeof(p):" << sizeof(p) << endl;
     cout << "p.Bear20::year" << p.Bear20::year << endl;
     cout << "p.Cat20::year" << p.Cat20::year << endl;
 
-    // ÓÉÓÚÖ»ĞèÒ»·İ¾Í¿ÉÒÔ£¬ËùÒÔÔÚ×ÓÀàÉÏ¼ÓÉÏĞŞÊÎ·ûvirtual£¬»á±ä³ÉĞé¼Ì³Ğ
+    // ç”±äºåªéœ€ä¸€ä»½å°±å¯ä»¥ï¼Œæ‰€ä»¥åœ¨å­ç±»ä¸ŠåŠ ä¸Šä¿®é¥°ç¬¦virtualï¼Œä¼šå˜æˆè™šç»§æ‰¿
     Panda21 p2;
     p2.Bear21::year = 2023;
     p2.Cat21::year = 2025;
-    // ÓÉÓÚÊÇĞéÊôĞÔ£¬Ö»ÓĞÒ»·İ£¬ËùÒÔ¿ÉÒÔÖ±½Ó¸³Öµ£¬²»ÓÃ´øÉÏ×÷ÓÃÓò
+    // ç”±äºæ˜¯è™šå±æ€§ï¼Œåªæœ‰ä¸€ä»½ï¼Œæ‰€ä»¥å¯ä»¥ç›´æ¥èµ‹å€¼ï¼Œä¸ç”¨å¸¦ä¸Šä½œç”¨åŸŸ
     p2.year = 2027;
-    // cl /d1 reportSingleClassLayoutPanda21 "020-¼Ì³Ğ-Ğé¼Ì³Ğ.cpp"
+    // cl /d1 reportSingleClassLayoutPanda21 "020-ç»§æ‰¿-è™šç»§æ‰¿.cpp"
     //class Panda21   size(12):
     //        +---
     // 0      | +--- (base class Bear21)
-    // 0      | | {vbptr} virtual base pointer Ğé»ùÖ¸Õë£¬Ö¸ÏòĞé»ù±í(vbtable)£¬Õ¼ÓÃ4×Ö½Ú
-    //        | +--- Ğé»ù±í²éÕÒ$vbtable@Bear21£¬¿´µ½Æ«ÒÆÁ¿Îª8£¬0+8=8£¬Ö¸Ïò8ºÅµØÖ·£¬¼´yearÊôĞÔ
+    // 0      | | {vbptr} virtual base pointer è™šåŸºæŒ‡é’ˆï¼ŒæŒ‡å‘è™šåŸºè¡¨(vbtable)ï¼Œå ç”¨4å­—èŠ‚
+    //        | +--- è™šåŸºè¡¨æŸ¥æ‰¾$vbtable@Bear21ï¼Œçœ‹åˆ°åç§»é‡ä¸º8ï¼Œ0+8=8ï¼ŒæŒ‡å‘8å·åœ°å€ï¼Œå³yearå±æ€§
     // 4      | +--- (base class Cat21)
-    // 4      | | {vbptr} Ğé»ùÖ¸Õë£¬Õ¼ÓÃ4×Ö½Ú
-    //        | +--- Ğé»ù±í²éÕÒ$vbtable@Cat21£¬¿´µ½Æ«ÒÆÁ¿Îª4£¬4+4=8£¬Ö¸Ïò8ºÅµØÖ·£¬¼´yearÊôĞÔ
+    // 4      | | {vbptr} è™šåŸºæŒ‡é’ˆï¼Œå ç”¨4å­—èŠ‚
+    //        | +--- è™šåŸºè¡¨æŸ¥æ‰¾$vbtable@Cat21ï¼Œçœ‹åˆ°åç§»é‡ä¸º4ï¼Œ4+4=8ï¼ŒæŒ‡å‘8å·åœ°å€ï¼Œå³yearå±æ€§
     //        +---
     //        +--- (virtual base Animal21)
-    // 8      | year intÀàĞÍ£¬Õ¼ÓÃ4×Ö½Ú
+    // 8      | year intç±»å‹ï¼Œå ç”¨4å­—èŠ‚
     //        +---
-    // Ğé»ù±í virtual base table
+    // è™šåŸºè¡¨ virtual base table
     //Panda21::$vbtable@Bear21@:
     // 0      | 0
     // 1      | 8 (Panda21d(Bear21+0)Animal21)

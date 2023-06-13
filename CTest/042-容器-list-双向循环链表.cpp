@@ -3,10 +3,10 @@
 #include<algorithm>
 using namespace std;
 
-// ´òÓ¡
+// æ‰“å°
 void print(list<int> t)
 {
-    // Ë«Ïòµü´úÆ÷£¬Ö»Ö§³Ö++¡¢--
+    // åŒå‘è¿­ä»£å™¨ï¼Œåªæ”¯æŒ++ã€--
     for (list<int>::const_iterator it = t.begin(); it != t.end(); it++)
     {
         cout << *it << ",";
@@ -14,68 +14,68 @@ void print(list<int> t)
     cout << endl;
 }
 
-// ×Ô¶¨Òå½µĞòÅÅÁĞ
+// è‡ªå®šä¹‰é™åºæ’åˆ—
 bool desc(const int& v1, const int& v2)
 {
     return v1 > v2;
 }
 
-// Ë«ÏòÑ­»·Á´±í
-// ·ÇÁ¬Ğø´æ´¢
-// Á´±íÓÉ½Úµã¹¹³É£¬½ÚµãÓÉ`Êı¾İÓò`ºÍ`Ö¸ÕëÓò`(°üÀ¨Ç°Ö¸ÕëºÍºóÖ¸Õë)¹¹³É
+// åŒå‘å¾ªç¯é“¾è¡¨
+// éè¿ç»­å­˜å‚¨
+// é“¾è¡¨ç”±èŠ‚ç‚¹æ„æˆï¼ŒèŠ‚ç‚¹ç”±`æ•°æ®åŸŸ`å’Œ`æŒ‡é’ˆåŸŸ`(åŒ…æ‹¬å‰æŒ‡é’ˆå’ŒåæŒ‡é’ˆ)æ„æˆ
 // |------| |------| |------| |------|
 // | data | | data | | data | | data |
 // |------| |------| |------| |------|
 // | prev | | prev | | prev | | prev |
 // | next | | next | | next | | next |
 // |------| |------| |------| |------|
-// ÆäÖĞµÚÒ»¸ö½ÚµãµÄprevÖ¸ÕëÖ¸Ïò×îºóÒ»¸ö½Úµã£¬×îºóÒ»¸ö½ÚµãµÄnextÖ¸ÕëÖ¸ÏòµÚÒ»¸ö½Úµã
+// å…¶ä¸­ç¬¬ä¸€ä¸ªèŠ‚ç‚¹çš„prevæŒ‡é’ˆæŒ‡å‘æœ€åä¸€ä¸ªèŠ‚ç‚¹ï¼Œæœ€åä¸€ä¸ªèŠ‚ç‚¹çš„nextæŒ‡é’ˆæŒ‡å‘ç¬¬ä¸€ä¸ªèŠ‚ç‚¹
 void main042()
 {
-    /* ¹¹Ôì */
-    // ÎŞ²Î(Ä¬ÈÏ)
+    /* æ„é€  */
+    // æ— å‚(é»˜è®¤)
     // list<T>();
     list<int> t1;
     t1.push_back(1);
     t1.push_back(2);
     t1.push_back(3);
     print(t1);
-    // Çø¼ä
-    // ½«t[begin,end)Çø¼äÄÚµÄÔªËØ¿½±´¸ø×Ô¼º
+    // åŒºé—´
+    // å°†t[begin,end)åŒºé—´å†…çš„å…ƒç´ æ‹·è´ç»™è‡ªå·±
     // list<T>(const_iterator begin, const_iterator end);
     list<int> t2(t1.begin(), t1.end());
     print(t2);
-    // n¸öÔªËØ
+    // nä¸ªå…ƒç´ 
     // list<T>(int n, int value);
     list<int> t3(10, 1);
     print(t3);
-    // ¿½±´
+    // æ‹·è´
     // list<T>(const list<T>& d);
     list<int> t4(t3);
     print(t4);
 
-    /* ¸³Öµ */
-    // list¸³Öµ¸øµ±Ç°list
+    /* èµ‹å€¼ */
+    // listèµ‹å€¼ç»™å½“å‰list
     // list& operator=(const list& d);
     list<int> t5 = t1;
     print(t5);
-    // ½«t[begin,end)Çø¼äÄÚµÄÔªËØ¿½±´¸ø×Ô¼º
+    // å°†t[begin,end)åŒºé—´å†…çš„å…ƒç´ æ‹·è´ç»™è‡ªå·±
     // void assign(const_iterator begin, const_iterator end);
     list<int> t6;
     t6.assign(t1.begin(), t1.end());
     print(t6);
-    // n¸öÔªËØ
+    // nä¸ªå…ƒç´ 
     // void assign(int n, int value);
     list<int> t7;
     t7.assign(10, 1);
     print(t7);
 
-    /* ´óĞ¡ */
+    /* å¤§å° */
     list<int> t8;
-    // ÅĞ¶ÏÊÇ·ñÎª¿Õ
+    // åˆ¤æ–­æ˜¯å¦ä¸ºç©º
     // bool empty() const;
     cout << "empty:" << t8.empty();
-    // ´óĞ¡
+    // å¤§å°
     // bool size() const;
     cout << ",size:" << t8.size() << endl;
     for (int i = 0; i < 10; i++)
@@ -85,72 +85,72 @@ void main042()
     print(t8);
     cout << "empty:" << t8.empty();
     cout << ",size:" << t8.size() << endl;
-    // ÖØĞÂÖ¸¶¨ÈİÆ÷´óĞ¡¡£±ä´ó£ºÌî³äÄ¬ÈÏÖµ£»±äĞ¡£ºÎ²²¿É¾³ı
+    // é‡æ–°æŒ‡å®šå®¹å™¨å¤§å°ã€‚å˜å¤§ï¼šå¡«å……é»˜è®¤å€¼ï¼›å˜å°ï¼šå°¾éƒ¨åˆ é™¤
     t8.resize(30);
     print(t8);
     t8.resize(5);
     print(t8);
-    // ÖØĞÂÖ¸¶¨ÈİÆ÷´óĞ¡¡£±ä´ó£ºÌî³äÖ¸¶¨Öµ£»±äĞ¡£ºÎ²²¿É¾³ı
+    // é‡æ–°æŒ‡å®šå®¹å™¨å¤§å°ã€‚å˜å¤§ï¼šå¡«å……æŒ‡å®šå€¼ï¼›å˜å°ï¼šå°¾éƒ¨åˆ é™¤
     t8.resize(30, 5);
     print(t8);
     t8.resize(20, 100);
     print(t8);
 
-    /* ²åÈëºÍÉ¾³ı */
+    /* æ’å…¥å’Œåˆ é™¤ */
     list<int> t9;
-    // Î²²¿²åÈë
+    // å°¾éƒ¨æ’å…¥
     // void push_back(T& value);
     t9.push_back(6);
     t9.push_back(7);
-    // Í·²¿²åÈë
+    // å¤´éƒ¨æ’å…¥
     // void push_front(T& value);
     t9.push_front(8);
     t9.push_front(9);
     print(t9);
-    // É¾³ıÎ²²¿
+    // åˆ é™¤å°¾éƒ¨
     // void pop_back();
     t9.pop_back();
-    // É¾³ıÍ·²¿
+    // åˆ é™¤å¤´éƒ¨
     // void pop_front();
     t9.pop_front();
     print(t9);
-    // µü´úÆ÷Ö¸ÏòÎ»ÖÃÇ°²åÈëÔªËØ
+    // è¿­ä»£å™¨æŒ‡å‘ä½ç½®å‰æ’å…¥å…ƒç´ 
     // iterator insert(const_iterator pos, T& value);
     t9.insert(t9.begin(), 10);
     print(t9);
-    // µü´úÆ÷Ö¸ÏòÎ»ÖÃÇ°²åÈën¸öÔªËØ
+    // è¿­ä»£å™¨æŒ‡å‘ä½ç½®å‰æ’å…¥nä¸ªå…ƒç´ 
     // iterator insert(const_iterator pos, int count, T& value);
     t9.insert(++++t9.begin(), 5, 100);
     print(t9);
-    // É¾³ıµü´úÆ÷Ö¸ÏòÔªËØ
+    // åˆ é™¤è¿­ä»£å™¨æŒ‡å‘å…ƒç´ 
     // iterator erase(const_iterator pos);
     t9.erase(--t9.end());
     print(t9);
-    // É¾³ıµü´úÆ÷startµ½endÖ®¼äµÄÔªËØ
+    // åˆ é™¤è¿­ä»£å™¨startåˆ°endä¹‹é—´çš„å…ƒç´ 
     // iterator erase(const_iterator start, const_iterator end);
     t9.erase(++++t9.begin(), ----t9.end());
     print(t9);
-    // ÒÆ³ıÖ¸¶¨Öµ
+    // ç§»é™¤æŒ‡å®šå€¼
     // void remove(T& value);
     t9.remove(100);
     print(t9);
-    // Çå¿ÕÈİÆ÷
+    // æ¸…ç©ºå®¹å™¨
     // void clear();
     t9.clear();
     print(t9);
 
-    /* ·´×ªºÍÅÅĞò */
+    /* åè½¬å’Œæ’åº */
     list<int> t10;
     t10.push_back(4);
     t10.push_back(2);
     t10.push_back(3);
     t10.push_back(5);
     t10.push_back(1);
-    // Ê¹ÓÃ×Ô¶¨ÒåÅÅĞò¹æÔò
+    // ä½¿ç”¨è‡ªå®šä¹‰æ’åºè§„åˆ™
     // void sort(function());
     t10.sort(desc);
     print(t10);
-    // ·´×ª
+    // åè½¬
     // void reverse();
     t10.reverse();
     print(t10);

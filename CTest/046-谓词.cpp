@@ -12,7 +12,7 @@ void print046(vector<int> v)
     cout << endl;
 }
 
-// ±È5´ó
+// æ¯”5å¤§
 class GreaterFive
 {
 public:
@@ -22,7 +22,7 @@ public:
     }
 };
 
-// ½µĞò
+// é™åº
 class Desc
 {
 public:
@@ -32,32 +32,32 @@ public:
     }
 };
 
-// ·µ»ØboolÀàĞÍµÄ`·Âº¯Êı`½Ğ×ö`Î½´Ê`
-// Èç¹ûoperator()½ÓÊÜ1¸ö²ÎÊı£¬½ĞÒ»ÔªÎ½´Ê
-// Èç¹ûoperator()½ÓÊÜ2¸ö²ÎÊı£¬½Ğ¶şÔªÎ½´Ê
+// è¿”å›boolç±»å‹çš„`ä»¿å‡½æ•°`å«åš`è°“è¯`
+// å¦‚æœoperator()æ¥å—1ä¸ªå‚æ•°ï¼Œå«ä¸€å…ƒè°“è¯
+// å¦‚æœoperator()æ¥å—2ä¸ªå‚æ•°ï¼Œå«äºŒå…ƒè°“è¯
 void main046()
 {
-    /* Ò»ÔªÎ½´Ê */
+    /* ä¸€å…ƒè°“è¯ */
     vector<int> v;
     v.push_back(3);
     v.push_back(7);
     v.push_back(5);
     v.push_back(1);
     v.push_back(9);
-    // ²éÕÒ±È5´óµÄÖµ
+    // æŸ¥æ‰¾æ¯”5å¤§çš„å€¼
     // iterator find_if(iterator begin, iterator end, function)
-    // GreaterFive()ÊÇÄäÃûº¯Êı¶ÔÏó
+    // GreaterFive()æ˜¯åŒ¿åå‡½æ•°å¯¹è±¡
     vector<int>::iterator vr = find_if(v.begin(), v.end(), GreaterFive());
     if (vr == v.end())
     {
-        cout << "Î´ÕÒµ½£¡" << endl;
+        cout << "æœªæ‰¾åˆ°ï¼" << endl;
     }
     else
     {
-        cout << "ÕÒµ½ÁË±È5´óµÄÊı×ÖÎª£º" << *vr << endl;
+        cout << "æ‰¾åˆ°äº†æ¯”5å¤§çš„æ•°å­—ä¸ºï¼š" << *vr << endl;
     }
 
-    /* ¶şÔªÎ½´Ê */
+    /* äºŒå…ƒè°“è¯ */
     print046(v);
     sort(v.begin(), v.end(), Desc());
     print046(v);

@@ -15,15 +15,15 @@ void main051()
     {
         v.push_back(i);
     }
-    // 条件查找，找到返回第一个对应的iterator，找不到返回end
+    // 鏉′欢鏌ユ壘锛屾壘鍒拌繑鍥炵涓�涓搴旂殑iterator锛屾壘涓嶅埌杩斿洖end
     // iterator for_each(iterator begin, iterator end, function);
     vector<int>::iterator it1 = find_if(v.begin(), v.end(), greate5);
     if (it1 == v.end())
     {
-        cout << "未找到元素！" << endl;
+        cout << "鏈壘鍒板厓绱狅紒" << endl;
     }
     else
     {
-        cout << "找到元素:" << *it1 << endl;
+        cout << "鎵惧埌鍏冪礌:" << *it1 << endl;
     }
 }

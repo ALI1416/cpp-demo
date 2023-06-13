@@ -2,22 +2,22 @@
 #include<map>
 using namespace std;
 
-// ´òÓ¡
+// æ‰“å°
 void print(map<int, int> m)
 {
     for (map<int, int>::const_iterator it = m.begin(); it != m.end(); it++)
     {
-        // ·ÃÎÊ·½Ê½2
+        // è®¿é—®æ–¹å¼2
         cout << "key:" << (*it).first << ",value:" << (*it).second << "; ";
     }
     cout << endl;
 }
 
-// ×Ô¶¨ÒåÅÅĞò
+// è‡ªå®šä¹‰æ’åº
 class Desc2
 {
 public:
-    // ½µĞò·Âº¯Êı
+    // é™åºä»¿å‡½æ•°
     bool operator()(const int& v1, const int& v2) const
     {
         return v1 > v2;
@@ -26,8 +26,8 @@ public:
 
 void main045() {
 
-    /* ¹¹Ôì */
-    // ÎŞ²Î(Ä¬ÈÏ)
+    /* æ„é€  */
+    // æ— å‚(é»˜è®¤)
     // map<T1, T2>();
     map<int, int> m1;
     m1.insert(pair<int, int>(1, 10));
@@ -35,22 +35,22 @@ void main045() {
     m1.insert(make_pair(3, 30));
     m1.insert(make_pair(4, 40));
     print(m1);
-    // ¿½±´
+    // æ‹·è´
     // map<T1, T2>(const map<T1, T2>& m);
     map<int, int> m2(m1);
     print(m1);
 
-    /* ¸³Öµ */
-    // map¸³Öµ¸øµ±Ç°map
+    /* èµ‹å€¼ */
+    // mapèµ‹å€¼ç»™å½“å‰map
     // map& operator=(const map& s);
     map<int, int> m3 = m2;
     print(m3);
 
-    /* ´óĞ¡²Ù×÷ */
+    /* å¤§å°æ“ä½œ */
     map<int, int> m4;
-    // ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
+    // åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©º
     // bool empty();
-    // ·µ»ØÕ»µÄ³¤¶È
+    // è¿”å›æ ˆçš„é•¿åº¦
     // int size();
     cout << "empty:" << m4.empty() << ",size:" << m4.size() << endl;
     m4.insert(make_pair(2, 20));
@@ -58,55 +58,55 @@ void main045() {
     m4.insert(make_pair(4, 40));
     cout << "empty:" << m4.empty() << ",size:" << m4.size() << endl;
 
-    /* ´æÈ¡ */
+    /* å­˜å– */
     map<int, int> m5;
-    // ²åÈë
+    // æ’å…¥
     // pair<map<T1, T2>::iterator, bool> insert(pair<map<T1, T2>& value);
-    // ²åÈë·½Ê½1
+    // æ’å…¥æ–¹å¼1
     m5.insert(pair<int, int>(1, 10));
-    // ²åÈë·½Ê½2
+    // æ’å…¥æ–¹å¼2
     m5.insert(make_pair(2, 20));
-    // ²åÈë·½Ê½3(²»½¨Òé)
+    // æ’å…¥æ–¹å¼3(ä¸å»ºè®®)
     m5[3] = 30;
     m5.insert(make_pair(5, 50));
     m5.insert(make_pair(4, 40));
-    // ·ÃÎÊ·½Ê½1
+    // è®¿é—®æ–¹å¼1
     cout << m5[4] << endl;
     print(m5);
-    // É¾³ıµü´úÆ÷Ö¸ÏòÔªËØ
+    // åˆ é™¤è¿­ä»£å™¨æŒ‡å‘å…ƒç´ 
     // iterator erase(iterator pos);
     m5.erase(--m5.end());
     print(m5);
-    // É¾³ıµü´úÆ÷startµ½endÖ®¼äµÄÔªËØ
+    // åˆ é™¤è¿­ä»£å™¨startåˆ°endä¹‹é—´çš„å…ƒç´ 
     // iterator erase(iterator start, iterator end);
     m5.erase(++m5.begin(), --m5.end());
     print(m5);
-    // É¾³ıÖ¸¶¨keyµÄÔªËØ
+    // åˆ é™¤æŒ‡å®škeyçš„å…ƒç´ 
     // ? erase(T1);
     m5.erase(4);
     print(m5);
-    // Çå¿ÕÈİÆ÷
+    // æ¸…ç©ºå®¹å™¨
     // void clear();
     m5.clear();
     print(m5);
 
-    /* ²éÕÒºÍÍ³¼Æ */
+    /* æŸ¥æ‰¾å’Œç»Ÿè®¡ */
     map<int, int> m6;
     m6.insert(make_pair(4, 40));
     m6.insert(make_pair(2, 20));
     m6.insert(make_pair(5, 50));
     m6.insert(make_pair(1, 10));
     m6.insert(make_pair(3, 30));
-    // ²éÕÒÊÇ·ñ´æÔÚ¸ÃÖµ£¬´æÔÚ·µ»Øµü´úÆ÷£¬²»´æÔÚ·µ»Øs.end();
+    // æŸ¥æ‰¾æ˜¯å¦å­˜åœ¨è¯¥å€¼ï¼Œå­˜åœ¨è¿”å›è¿­ä»£å™¨ï¼Œä¸å­˜åœ¨è¿”å›s.end();
     // iterator find(T value);
-    cout << "²éÕÒµ½µÄÖµ:" << (*m6.find(2)).second << endl;
-    cout << "ÊÇ·ñ²éÕÒµ½:" << (m6.find(0) != m6.end()) << endl;
-    // Í³¼Æ¸öÊı
+    cout << "æŸ¥æ‰¾åˆ°çš„å€¼:" << (*m6.find(2)).second << endl;
+    cout << "æ˜¯å¦æŸ¥æ‰¾åˆ°:" << (m6.find(0) != m6.end()) << endl;
+    // ç»Ÿè®¡ä¸ªæ•°
     // int count(T value);
-    cout << "¸öÊı:" << m6.count(2) << endl;
-    cout << "¸öÊı:" << m6.count(0) << endl;
+    cout << "ä¸ªæ•°:" << m6.count(2) << endl;
+    cout << "ä¸ªæ•°:" << m6.count(0) << endl;
 
-    /* ×Ô¶¨ÒåÅÅĞò */
+    /* è‡ªå®šä¹‰æ’åº */
     map<int, int, Desc2> m7;
     m7.insert(make_pair(4, 40));
     m7.insert(make_pair(2, 20));

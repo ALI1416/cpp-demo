@@ -10,25 +10,25 @@ public:
     Person13(string name, int year)
     {
         this->name = name;
-        // Éî¿½±´
+        // æ·±æ‹·è´
         this->year = new int(year);
     }
 
-    // ±àÒëÆ÷Ìá¹©µÄµÚ4¸ö¹¹Ôìº¯Êı
-    // ÖØÔØ¸³ÖµÔËËã·û£¬µ«ÊÇÇ³¿½±´
-    // ´Ë´¦Ìæ»»³ÉÉî¿½±´
-    // ·µ»Ø*thisÊÇÎªÁË¿ÉÒÔÁ´Ê½µ÷ÓÃ
+    // ç¼–è¯‘å™¨æä¾›çš„ç¬¬4ä¸ªæ„é€ å‡½æ•°
+    // é‡è½½èµ‹å€¼è¿ç®—ç¬¦ï¼Œä½†æ˜¯æµ…æ‹·è´
+    // æ­¤å¤„æ›¿æ¢æˆæ·±æ‹·è´
+    // è¿”å›*thisæ˜¯ä¸ºäº†å¯ä»¥é“¾å¼è°ƒç”¨
     Person13& operator=(Person13& p)
     {
         name = p.name;
-        // Éî¿½±´
+        // æ·±æ‹·è´
         year = new int(*p.year);
         return *this;
     }
 
     ~Person13()
     {
-        // ÊÍ·Å¶ÑÇøÄÚ´æ
+        // é‡Šæ”¾å †åŒºå†…å­˜
         if (year != NULL)
         {
             delete year;
@@ -42,9 +42,9 @@ void main014()
     Person13 p1("ck", 1998);
     Person13 p2("kk", 1999);
     Person13 p3("cc", 2000);
-    cout << "p1:ĞÕÃû£º" << p1.name << "£¬³öÉúÄê£º" << *p1.year << endl;
+    cout << "p1:å§“åï¼š" << p1.name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << *p1.year << endl;
     p1 = p2;
-    cout << "p1:ĞÕÃû£º" << p1.name << "£¬³öÉúÄê£º" << *p1.year << endl;
+    cout << "p1:å§“åï¼š" << p1.name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << *p1.year << endl;
     p1 = p2 = p3;
-    cout << "p1:ĞÕÃû£º" << p1.name << "£¬³öÉúÄê£º" << *p1.year << endl;
+    cout << "p1:å§“åï¼š" << p1.name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << *p1.year << endl;
 }

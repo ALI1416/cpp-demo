@@ -4,23 +4,23 @@ using namespace std;
 class Person8
 {
 public:
-    // ³£ÊôĞÔ£¬±ØĞëÓĞÄ¬ÈÏÖµ
+    // å¸¸å±æ€§ï¼Œå¿…é¡»æœ‰é»˜è®¤å€¼
     const string name ="ck";
-    // mutable¿É±äµÄ£¬³£·½·¨¿ÉĞŞ¸Ä
+    // mutableå¯å˜çš„ï¼Œå¸¸æ–¹æ³•å¯ä¿®æ”¹
     mutable bool gender;
     int year;
 
     void print()
     {
-        cout << "ĞÕÃû£º" << name << "£¬ĞÔ±ğ£º" << (gender == true ? "ÄĞ" : "Å®") << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œæ€§åˆ«ï¼š" << (gender == true ? "ç”·" : "å¥³") << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
 
-    // ³£·½·¨
+    // å¸¸æ–¹æ³•
     void print2() const
     {
-        // ³£·½·¨Ö»¿ÉĞŞ¸ÄmutableĞŞÊÎ·¢ÊôĞÔ
+        // å¸¸æ–¹æ³•åªå¯ä¿®æ”¹mutableä¿®é¥°å‘å±æ€§
         this->gender = true;
-        cout << "ĞÔ±ğ£º" << (gender == true ? "ÄĞ" : "Å®") << endl;
+        cout << "æ€§åˆ«ï¼š" << (gender == true ? "ç”·" : "å¥³") << endl;
     }
 
 };
@@ -32,12 +32,12 @@ public:
 
     void print()
     {
-        cout << "ĞÔ±ğ£º" << (gender == true ? "ÄĞ" : "Å®") << endl;
+        cout << "æ€§åˆ«ï¼š" << (gender == true ? "ç”·" : "å¥³") << endl;
     }
 
     void print2() const
     {
-        cout << "ĞÔ±ğ£º" << (gender == true ? "ÄĞ" : "Å®") << endl;
+        cout << "æ€§åˆ«ï¼š" << (gender == true ? "ç”·" : "å¥³") << endl;
     }
 };
 
@@ -49,8 +49,8 @@ void main009()
     p.print();
     p.print2();
 
-    // ³£¶ÔÏó£¬Ö»ÄÜµ÷ÓÃ³£·½·¨
-    // ×¢Òâ£º²»ÄÜ´øÓĞconstÊôĞÔ
+    // å¸¸å¯¹è±¡ï¼Œåªèƒ½è°ƒç”¨å¸¸æ–¹æ³•
+    // æ³¨æ„ï¼šä¸èƒ½å¸¦æœ‰constå±æ€§
     const Person9 p2;
     p2.gender = false;
     p2.print2();

@@ -2,7 +2,7 @@
 #include"person33.h"
 using namespace std;
 
-// ÊµÏÖ
+// å®žçŽ°
 template<class NameType, class YearType>
 Person33<NameType, YearType>::Person33(NameType name, YearType year)
 {
@@ -13,5 +13,5 @@ Person33<NameType, YearType>::Person33(NameType name, YearType year)
 template<class NameType, class YearType>
 void Person33<NameType, YearType>::print()
 {
-    cout << "ÐÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+    cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
 }

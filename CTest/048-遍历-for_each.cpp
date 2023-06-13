@@ -30,10 +30,10 @@ void printPerson01(Person048 value)
     cout << value.year << "," << value.gender << " ";
 }
 
-// Ëã·¨Ö÷ÒªÓÉÍ·ÎÄ¼şalgorithm¡¢functional¡¢numeric×é³É
-// algorithmÊÇËùÓĞSTLÍ·ÎÄ¼şÖĞ×î´óµÄÒ»¸ö£¬º¬ÓĞ±È½Ï¡¢½»»»¡¢±éÀú¡¢¸´ÖÆ¡¢ĞŞ¸ÄµÈ
-// numericÌå»ıºÜĞ¡£¬Ö»°üº¬¼¸¸öÔÚĞòÁĞÉÏÃæ½øĞĞ¼òµ¥ÊıÑ§ÔËËãµÄÄ£°åº¯Êı
-// functional¶¨ÒåÁËÒ»Ğ©Ä£°åÀà£¬ÓÃÒÔÉùÃ÷º¯Êı¶ÔÏó
+// ç®—æ³•ä¸»è¦ç”±å¤´æ–‡ä»¶algorithmã€functionalã€numericç»„æˆ
+// algorithmæ˜¯æ‰€æœ‰STLå¤´æ–‡ä»¶ä¸­æœ€å¤§çš„ä¸€ä¸ªï¼Œå«æœ‰æ¯”è¾ƒã€äº¤æ¢ã€éå†ã€å¤åˆ¶ã€ä¿®æ”¹ç­‰
+// numericä½“ç§¯å¾ˆå°ï¼ŒåªåŒ…å«å‡ ä¸ªåœ¨åºåˆ—ä¸Šé¢è¿›è¡Œç®€å•æ•°å­¦è¿ç®—çš„æ¨¡æ¿å‡½æ•°
+// functionalå®šä¹‰äº†ä¸€äº›æ¨¡æ¿ç±»ï¼Œç”¨ä»¥å£°æ˜å‡½æ•°å¯¹è±¡
 void main048()
 {
     vector<int> v;
@@ -42,13 +42,13 @@ void main048()
         v.push_back(i);
     }
     // void for_each(iterator begin, iterator end, function);
-    // Ê¹ÓÃº¯Êı±éÀú
+    // ä½¿ç”¨å‡½æ•°éå†
     for_each(v.begin(), v.end(), print01);
     cout << endl;
-    // Ê¹ÓÃ·Âº¯Êı±éÀú
+    // ä½¿ç”¨ä»¿å‡½æ•°éå†
     for_each(v.begin(), v.end(), Print02());
     cout << endl;
-    // ±éÀú¶ÔÏó
+    // éå†å¯¹è±¡
     vector<Person048> v2;
     v2.push_back(Person048(1998, true));
     v2.push_back(Person048(1999, false));

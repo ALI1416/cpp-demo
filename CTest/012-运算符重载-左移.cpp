@@ -3,18 +3,18 @@ using namespace std;
 
 class Person11
 {
-    // Èç¹ûÊôĞÔÊÇË½ÓĞµÄ£¬ĞèÒª¼ÓÉÏÓÑÔªÉùÃ÷
+    // å¦‚æœå±æ€§æ˜¯ç§æœ‰çš„ï¼Œéœ€è¦åŠ ä¸Šå‹å…ƒå£°æ˜
     friend ostream& operator<<(ostream& cout, Person11& p);
 
 private:
     string name;
 public:
     Person11(string name):name(name){}
-    // ²»ÄÜÀûÓÃÄÚ²¿º¯ÊıÖØÔØ<<ÔËËã·û£¬p.operator<<(cout)£¬¼ò»¯Îªp << cout£¬ÒòÎªcoutÔÚÓÒ²à
+    // ä¸èƒ½åˆ©ç”¨å†…éƒ¨å‡½æ•°é‡è½½<<è¿ç®—ç¬¦ï¼Œp.operator<<(cout)ï¼Œç®€åŒ–ä¸ºp << coutï¼Œå› ä¸ºcoutåœ¨å³ä¾§
     //void Person11 operator<<(cout)
 };
 
-// ĞèÒª·µ»Øostream& cout£¬²ÅÄÜ½øĞĞÁ´Ê½µ÷ÓÃ
+// éœ€è¦è¿”å›ostream& coutï¼Œæ‰èƒ½è¿›è¡Œé“¾å¼è°ƒç”¨
 ostream& operator<<(ostream& cout, Person11& p)
 {
     cout << p.name;
@@ -24,5 +24,5 @@ ostream& operator<<(ostream& cout, Person11& p)
 void main012()
 {
     Person11 p("ck");
-    cout << "ĞÕÃû£º" << p << endl;
+    cout << "å§“åï¼š" << p << endl;
 }

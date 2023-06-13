@@ -13,7 +13,7 @@ public:
     void print();
 };
 
-// ÀàÍâÊµÏÖ¹¹Ôìº¯Êı
+// ç±»å¤–å®ç°æ„é€ å‡½æ•°
 template<class NameType, class YearType>
 Person32<NameType, YearType>::Person32(NameType name, YearType year)
 {
@@ -21,11 +21,11 @@ Person32<NameType, YearType>::Person32(NameType name, YearType year)
     this->year = year;
 }
 
-// ÀàÍâÊµÏÖÆÕÍ¨º¯Êı
+// ç±»å¤–å®ç°æ™®é€šå‡½æ•°
 template<class NameType, class YearType>
 void Person32<NameType, YearType>::print()
 {
-    cout << "ĞÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+    cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
 }
 
 void main032()

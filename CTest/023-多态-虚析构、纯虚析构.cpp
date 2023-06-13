@@ -4,23 +4,23 @@ using namespace std;
 class Animal24
 {
 public:
-    // ¼ÓÉÏvirtualĞŞÊÎ·û£¬ĞéÎö¹¹
-    // ¿ÉÒÔ½â¾ö¸¸ÀàÊÍ·ÅÊ±£¬×ÓÀà²»ÊÍ·ÅµÄÎÊÌâ
+    // åŠ ä¸Švirtualä¿®é¥°ç¬¦ï¼Œè™šææ„
+    // å¯ä»¥è§£å†³çˆ¶ç±»é‡Šæ”¾æ—¶ï¼Œå­ç±»ä¸é‡Šæ”¾çš„é—®é¢˜
     //virtual ~Animal24()
     //{
-    //    cout << "Animal24ĞéÎö¹¹" << endl;
+    //    cout << "Animal24è™šææ„" << endl;
     //}
 
-    // ´æĞéÎö¹¹£¬±ØĞëÊµÏÖ
+    // å­˜è™šææ„ï¼Œå¿…é¡»å®ç°
     virtual ~Animal24() = 0;
 
     virtual void speak() = 0;
 };
 
-// ÊµÏÖ´æĞéÎö¹¹
+// å®ç°å­˜è™šææ„
 Animal24::~Animal24()
 {
-    cout << "Animal24´¿ĞéÎö¹¹" << endl;
+    cout << "Animal24çº¯è™šææ„" << endl;
 }
 
 class Cat24 : public Animal24
@@ -37,7 +37,7 @@ public:
     {
         if (name != NULL)
         {
-            cout << "Cat24Îö¹¹" << endl;
+            cout << "Cat24ææ„" << endl;
             delete name;
             name = NULL;
         }
@@ -45,13 +45,13 @@ public:
 
     void speak()
     {
-        cout << "Ğ¡Ã¨[" << *name << "]ÔÚËµ»°" << endl;
+        cout << "å°çŒ«[" << *name << "]åœ¨è¯´è¯" << endl;
     }
 };
 
 void main023()
 {
-    Animal24* animal = new Cat24("ß÷ß÷");
+    Animal24* animal = new Cat24("å–µå–µ");
     animal->speak();
     delete animal;
 }

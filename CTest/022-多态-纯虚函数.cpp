@@ -1,11 +1,11 @@
 #include<iostream>
 using namespace std;
 
-// º¬ÓĞ´¿Ğéº¯ÊıµÄÀà£¬Ò²½Ğ³éÏóÀà
+// å«æœ‰çº¯è™šå‡½æ•°çš„ç±»ï¼Œä¹Ÿå«æŠ½è±¡ç±»
 class Animal23
 {
 public:
-    // ´¿Ğéº¯Êı£¬±ØĞëÓĞÒ»¸ö×ÓÀàÊµÏÖ·½·¨
+    // çº¯è™šå‡½æ•°ï¼Œå¿…é¡»æœ‰ä¸€ä¸ªå­ç±»å®ç°æ–¹æ³•
     virtual void speak() = 0;
 };
 
@@ -14,7 +14,7 @@ class Cat23 : public Animal23
 public:
     void speak()
     {
-        cout << "Ğ¡Ã¨ÔÚËµ»°" << endl;
+        cout << "å°çŒ«åœ¨è¯´è¯" << endl;
     }
 };
 

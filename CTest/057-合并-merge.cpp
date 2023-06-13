@@ -26,9 +26,9 @@ void main057()
     vector<int> v3;
     v3.push_back(123);
     v3.push_back(123);
-    // ĞèÒª¸øÄ¿±êÈİÆ÷ÌáÇ°·ÖÅä¿Õ¼ä
+    // éœ€è¦ç»™ç›®æ ‡å®¹å™¨æå‰åˆ†é…ç©ºé—´
     v3.resize(v.size() + v2.size() + v3.size());
-    // ºÏ²¢2¸öÓĞĞòÈİÆ÷µ½ÁíÒ»¸öÈİÆ÷ÖĞ(ÈİÆ÷ÄÚµÄÔªËØ±ØĞëÊÇÓĞĞòµÄ£¬Ä¿±êÈİÆ÷ÄÚÈİ»á±»Çå¿Õ)
+    // åˆå¹¶2ä¸ªæœ‰åºå®¹å™¨åˆ°å¦ä¸€ä¸ªå®¹å™¨ä¸­(å®¹å™¨å†…çš„å…ƒç´ å¿…é¡»æ˜¯æœ‰åºçš„ï¼Œç›®æ ‡å®¹å™¨å†…å®¹ä¼šè¢«æ¸…ç©º)
     // void merge(iterator start1, iterator end1, iterator start2, iterator end2, iterator startDest);
     merge(v.begin(), v.end(), v2.begin(), v2.end(), v3.begin());
     print057(v3);

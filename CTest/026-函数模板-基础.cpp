@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// int½»»»
+// intäº¤æ¢
 void swapInt(int& a, int& b)
 {
     int t = a;
@@ -9,7 +9,7 @@ void swapInt(int& a, int& b)
     b = t;
 }
 
-// double½»»»
+// doubleäº¤æ¢
 void swapDouble(double& a, double& b)
 {
     double t = a;
@@ -17,9 +17,9 @@ void swapDouble(double& a, double& b)
     b = t;
 }
 
-// ÉùÃ÷Ä£°åtemplate<typename»òclass ·ºĞÍÃû³Æ>
-// Ò»°ãº¯ÊıÊ¹ÓÃtypename£¬ÀàÊ¹ÓÃclass
-// Í¨ÓÃ½»»»
+// å£°æ˜æ¨¡æ¿template<typenameæˆ–class æ³›å‹åç§°>
+// ä¸€èˆ¬å‡½æ•°ä½¿ç”¨typenameï¼Œç±»ä½¿ç”¨class
+// é€šç”¨äº¤æ¢
 template<typename T>
 void swapT(T& a, T& b)
 {
@@ -31,8 +31,8 @@ void swapT(T& a, T& b)
 template<typename T>
 void getT()
 {
-    // Ê¹ÓÃtypeid»ñÈ¡·ºĞÍÀàĞÍ
-    cout << "·ºĞÍÀàĞÍ£º" << typeid(T).name() << endl;
+    // ä½¿ç”¨typeidè·å–æ³›å‹ç±»å‹
+    cout << "æ³›å‹ç±»å‹ï¼š" << typeid(T).name() << endl;
 }
 
 void main026()
@@ -41,26 +41,26 @@ void main026()
     int b = 456;
     cout << "a:" << a << ",b:" << b << endl;
     swapInt(a, b);
-    cout << "½»»»ºó£ºa:" << a << ",b:" << b << endl;
+    cout << "äº¤æ¢åï¼ša:" << a << ",b:" << b << endl;
 
     double c = 1.23;
     double d = 4.56;
     cout << "c:" << c << ",d:" << d << endl;
     swapDouble(c, d);
-    cout << "½»»»ºó£ºc:" << c << ",d:" << d << endl;
+    cout << "äº¤æ¢åï¼šc:" << c << ",d:" << d << endl;
 
-    // Ê¹ÓÃÄ£°å
+    // ä½¿ç”¨æ¨¡æ¿
     double e = 1.23;
     double f = 4.56;
     cout << "e:" << e << ",f:" << f << endl;
-    // Ã»ÓĞ±êÃ÷Êı¾İÀàĞÍ£¬×Ô¶¯ÍÆµ¼
+    // æ²¡æœ‰æ ‡æ˜æ•°æ®ç±»å‹ï¼Œè‡ªåŠ¨æ¨å¯¼
     swapT(e, f);
-    cout << "½»»»ºó£ºe:" << e << ",f:" << f << endl;
-    // Ö¸Ã÷Êı¾İÀàĞÍ
+    cout << "äº¤æ¢åï¼še:" << e << ",f:" << f << endl;
+    // æŒ‡æ˜æ•°æ®ç±»å‹
     swapT<double>(e, f);
-    cout << "½»»»ºó£ºe:" << e << ",f:" << f << endl;
+    cout << "äº¤æ¢åï¼še:" << e << ",f:" << f << endl;
 
-    // »ñÈ¡·ºĞÍÀàĞÍ
+    // è·å–æ³›å‹ç±»å‹
     getT<int>();
     getT<string>();
 }

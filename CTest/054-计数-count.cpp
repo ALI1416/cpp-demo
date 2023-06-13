@@ -11,8 +11,8 @@ void main054()
         v.push_back(i);
     }
     v.push_back(2);
-    // ·µ»ØÕÒµ½µÄ¸öÊı
+    // è¿”å›æ‰¾åˆ°çš„ä¸ªæ•°
     // int count(iterator begin, iterator end, T value);
     int n = count(v.begin(), v.end(), 2);
-    cout << "ÕÒµ½µÄ¸öÊı£º" << n << endl;
+    cout << "æ‰¾åˆ°çš„ä¸ªæ•°ï¼š" << n << endl;
 }

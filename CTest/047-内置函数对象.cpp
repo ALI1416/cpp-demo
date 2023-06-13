@@ -1,82 +1,82 @@
 #include<iostream>
-// ÄÚÖÃº¯Êı¶ÔÏóÍ·ÎÄ¼ş
+// å†…ç½®å‡½æ•°å¯¹è±¡å¤´æ–‡ä»¶
 #include<functional>
 using namespace std;
 
-// ÄÚÖÃº¯Êı¶ÔÏó(·Âº¯Êı)
-// ËãÊı¡¢¹ØÏµ¡¢Âß¼­
+// å†…ç½®å‡½æ•°å¯¹è±¡(ä»¿å‡½æ•°)
+// ç®—æ•°ã€å…³ç³»ã€é€»è¾‘
 void main047()
 {
-    /* ËãÊı·Âº¯Êı */
-    // ¹¦ÄÜ£ºÊµÏÖËÄÔòÔËËã
-    // Ô­ĞÍ£ºplus(¼Ó)¡¢minus(¼õ)¡¢multiplies(³Ë)¡¢divides(³ı)¡¢modulus(Ä£)¡¢negate(·´)
-    // ÆäÖĞnegateÊÇÒ»ÔªÔËËã£¬ÆäËû¶¼ÊÇ¶şÔªÔËËã
-    // ·´
+    /* ç®—æ•°ä»¿å‡½æ•° */
+    // åŠŸèƒ½ï¼šå®ç°å››åˆ™è¿ç®—
+    // åŸå‹ï¼šplus(åŠ )ã€minus(å‡)ã€multiplies(ä¹˜)ã€divides(é™¤)ã€modulus(æ¨¡)ã€negate(å)
+    // å…¶ä¸­negateæ˜¯ä¸€å…ƒè¿ç®—ï¼Œå…¶ä»–éƒ½æ˜¯äºŒå…ƒè¿ç®—
+    // å
     // T negate<T>(T& t);
     negate<int> n;
     cout << n(123) << endl;
-    // ¼Ó
+    // åŠ 
     // T plus<T>(T& t1, T& t2);
     plus<int> p;
     cout << p(123, 456) << endl;
-    // ¼õ
+    // å‡
     // T minus<T>(T& t1, T& t2);
     minus<int> mi;
     cout << mi(123, 456) << endl;
-    // ³Ë
+    // ä¹˜
     // T multiplies<T>(T& t1, T& t2);
     multiplies<int> mu;
     cout << mu(123, 456) << endl;
-    // ³ı
+    // é™¤
     // T divides<T>(T& t1, T& t2);
     divides<int> d;
     cout << d(456, 123) << endl;
-    // Ä£
+    // æ¨¡
     // T modulus<T>(T& t1, T& t2);
     modulus<int> mo;
     cout << mo(456, 123) << endl;
 
-    /* ¹ØÏµ·Âº¯Êı */
-    // ¹¦ÄÜ£ºÊµÏÖ´óĞ¡ÅĞ¶Ï
-    // Ô­ĞÍ£ºequal_to(µÈÓÚ)¡¢not_equal_to(²»µÈ)¡¢greater(´óÓÚ)¡¢greater_equal(´óÓÚµÈÓÚ)¡¢less(Ğ¡ÓÚ)¡¢less_equal(Ğ¡ÓÚµÈÓÚ)
-    // µÈÓÚ
+    /* å…³ç³»ä»¿å‡½æ•° */
+    // åŠŸèƒ½ï¼šå®ç°å¤§å°åˆ¤æ–­
+    // åŸå‹ï¼šequal_to(ç­‰äº)ã€not_equal_to(ä¸ç­‰)ã€greater(å¤§äº)ã€greater_equal(å¤§äºç­‰äº)ã€less(å°äº)ã€less_equal(å°äºç­‰äº)
+    // ç­‰äº
     // bool equal_to<T>(T& t1, T& t2);
     equal_to<int> eq;
     cout << eq(123, 456) << endl;
-    // ²»µÈ
+    // ä¸ç­‰
     // bool not_equal_to<T>(T& t1, T& t2);
     not_equal_to<int> neq;
     cout << neq(123, 456) << endl;
-    // ´óÓÚ
+    // å¤§äº
     // bool greater<T>(T& t1, T& t2);
     greater<int> gt;
     cout << gt(123, 456) << endl;
-    // ´óÓÚµÈÓÚ
+    // å¤§äºç­‰äº
     // bool greater_equal<T>(T& t1, T& t2);
     greater_equal<int> gte;
     cout << gte(123, 456) << endl;
-    // Ğ¡ÓÚ
+    // å°äº
     // bool less<T>(T& t1, T& t2);
     less<int> lt;
     cout << lt(123, 456) << endl;
-    // Ğ¡ÓÚµÈÓÚ
+    // å°äºç­‰äº
     // bool less_equal<T>(T& t1, T& t2);
     less_equal<int> lte;
     cout << lte(123, 456) << endl;
 
-    /* Âß¼­·Âº¯Êı */
-    // ¹¦ÄÜ£ºÊµÏÖÂß¼­ÔËËã
-    // Ô­ĞÍ£ºlogical_and(Âß¼­Óë)¡¢logical_or(Âß¼­»ò)¡¢logical_not(Âß¼­·Ç)
-    // ÆäÖĞlogical_notÊÇÒ»ÔªÔËËã£¬ÆäËû¶¼ÊÇ¶şÔªÔËËã
-    // Âß¼­·Ç
+    /* é€»è¾‘ä»¿å‡½æ•° */
+    // åŠŸèƒ½ï¼šå®ç°é€»è¾‘è¿ç®—
+    // åŸå‹ï¼šlogical_and(é€»è¾‘ä¸)ã€logical_or(é€»è¾‘æˆ–)ã€logical_not(é€»è¾‘é)
+    // å…¶ä¸­logical_notæ˜¯ä¸€å…ƒè¿ç®—ï¼Œå…¶ä»–éƒ½æ˜¯äºŒå…ƒè¿ç®—
+    // é€»è¾‘é
     // bool logical_not<T>(T& t);
     logical_not<bool> logNot;
     cout << logNot(true) << endl;
-    // Âß¼­Óë
+    // é€»è¾‘ä¸
     // bool logical_and<T>(T& t1, T& t2);
     logical_and<bool> logAnd;
     cout << logAnd(true, false) << endl;
-    // Âß¼­»ò
+    // é€»è¾‘æˆ–
     // bool logical_or<T>(T& t1, T& t2);
     logical_or<bool> logOr;
     cout << logOr(true, false) << endl;

@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 
-// ÉùÃ÷
+// å£°æ˜
 class Room;
 
-// ½¨Öş
+// å»ºç­‘
 class Buliding
 {
 public:
@@ -13,24 +13,24 @@ public:
     void visit();
 };
 
-// ·¿¼ä
+// æˆ¿é—´
 class Room
 {
-    // ÓÑÔª£º¿ÉÒÔ·ÃÎÊË½ÓĞÊôĞÔ¡¢·½·¨
-    // È«¾Öº¯Êı
+    // å‹å…ƒï¼šå¯ä»¥è®¿é—®ç§æœ‰å±æ€§ã€æ–¹æ³•
+    // å…¨å±€å‡½æ•°
     friend void globalFun(Room* r);
-    // Àà
+    // ç±»
     friend class Floor;
-    // ·½·¨
+    // æ–¹æ³•
     friend void Buliding::visit();
 
 public:
-    string sittingRoom = "¿ÍÌü";
+    string sittingRoom = "å®¢å…";
 private:
-    string bedRoom = "ÎÔÊÒ";
+    string bedRoom = "å§å®¤";
 };
 
-// Â¥²ã
+// æ¥¼å±‚
 class Floor
 {
 public:
@@ -39,22 +39,22 @@ public:
     void visit();
 };
 
-// È«¾Öº¯Êı
+// å…¨å±€å‡½æ•°
 void globalFun(Room* r)
 {
-    cout << "È«¾Öº¯Êı·ÃÎÊ£º" << r->sittingRoom << endl;
-    cout << "È«¾Öº¯Êı·ÃÎÊ£º" << r->bedRoom << endl;
+    cout << "å…¨å±€å‡½æ•°è®¿é—®ï¼š" << r->sittingRoom << endl;
+    cout << "å…¨å±€å‡½æ•°è®¿é—®ï¼š" << r->bedRoom << endl;
 }
 
-// Íâ²¿¶¨Òå·½·¨
+// å¤–éƒ¨å®šä¹‰æ–¹æ³•
 Floor::Floor()
 {
     r = new Room;
 }
 void Floor::visit()
 {
-    cout << "Àà·ÃÎÊ£º" << r->sittingRoom << endl;
-    cout << "Àà·ÃÎÊ£º" << r->bedRoom << endl;
+    cout << "ç±»è®¿é—®ï¼š" << r->sittingRoom << endl;
+    cout << "ç±»è®¿é—®ï¼š" << r->bedRoom << endl;
 }
 Buliding::Buliding()
 {
@@ -62,8 +62,8 @@ Buliding::Buliding()
 }
 void Buliding::visit()
 {
-    cout << "·½·¨·ÃÎÊ£º" << r->sittingRoom << endl;
-    cout << "·½·¨·ÃÎÊ£º" << r->bedRoom << endl;
+    cout << "æ–¹æ³•è®¿é—®ï¼š" << r->sittingRoom << endl;
+    cout << "æ–¹æ³•è®¿é—®ï¼š" << r->bedRoom << endl;
 }
 
 void main010()

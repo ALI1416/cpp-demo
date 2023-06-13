@@ -2,46 +2,46 @@
 #include<stack>
 using namespace std;
 
-// Õ»(Stack) ÏÈ½øºó³ö FILO(First In Last Out)
+// æ ˆ(Stack) å…ˆè¿›åå‡º FILO(First In Last Out)
 void main040()
 {
-    /* ¹¹Ôì */
-    // ÎŞ²Î(Ä¬ÈÏ)
+    /* æ„é€  */
+    // æ— å‚(é»˜è®¤)
     // stack<T>();
     stack<int> s1;
     s1.push(123);
     cout << s1.top() << endl;
-    // ¿½±´
+    // æ‹·è´
     // stack<T>(const stack<T>& s);
     stack<int> s2(s1);
     cout << s2.top() << endl;
 
-    /* ¸³Öµ */
-    // stack¸³Öµ¸øµ±Ç°stack
+    /* èµ‹å€¼ */
+    // stackèµ‹å€¼ç»™å½“å‰stack
     // stack& operator=(const stack& s);
     stack<int> s3 = s2;
     cout << s3.top() << endl;
 
-    /* ´æÈ¡ */
+    /* å­˜å– */
     stack<int> s4;
-    // Ñ¹ÈëÔªËØ
+    // å‹å…¥å…ƒç´ 
     // void push(T& value);
     s4.push(123);
     s4.push(456);
     s4.push(789);
-    // È¡³öÔªËØ
+    // å–å‡ºå…ƒç´ 
     // T& top();
     cout << s4.top() << endl;
-    // µ¯³öÔªËØ
+    // å¼¹å‡ºå…ƒç´ 
     // void pop();
     s4.pop();
     cout << s4.top() << endl;
 
-    /* ´óĞ¡²Ù×÷ */
+    /* å¤§å°æ“ä½œ */
     stack<int> s5;
-    // ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
+    // åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©º
     // bool empty();
-    // ·µ»ØÕ»µÄ³¤¶È
+    // è¿”å›æ ˆçš„é•¿åº¦
     // int size();
     cout << "empty:" << s5.empty() << ",size:" << s5.size() << endl;
     s5.push(1);

@@ -20,9 +20,9 @@ void main060()
     }
     vector<int> v2;
     v2.push_back(123);
-    // ĞèÒª¸øÄ¿±êÈİÆ÷ÌáÇ°·ÖÅä¿Õ¼ä
+    // éœ€è¦ç»™ç›®æ ‡å®¹å™¨æå‰åˆ†é…ç©ºé—´
     v2.resize(v.size() + v2.size());
-    // Ä¿±êÈİÆ÷Êı¾İ»á±»´ÓbeginDest¿ªÊ¼Ìæ»»
+    // ç›®æ ‡å®¹å™¨æ•°æ®ä¼šè¢«ä»beginDestå¼€å§‹æ›¿æ¢
     // void copy(iterator start, iterator end, iterator startDest);
     copy(v.begin(), v.end(), v2.begin() + 1);
     print060(v2);

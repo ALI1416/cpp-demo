@@ -13,9 +13,9 @@ void main067()
         v2.push_back(i + 5);
     }
     vector<int> v3;
-    // ÈİÁ¿×î´óÇé¿ö£ºÁ½ÈİÆ÷»¥²»°üº¬¡£×î´óÖµ£ºÁ½ÈİÆ÷Ö®ºÍ
+    // å®¹é‡æœ€å¤§æƒ…å†µï¼šä¸¤å®¹å™¨äº’ä¸åŒ…å«ã€‚æœ€å¤§å€¼ï¼šä¸¤å®¹å™¨ä¹‹å’Œ
     v3.resize(v.size() + v2.size());
-    // ·µ»ØÄ¿±êÔªËØµÄ×îºóÒ»¸öÎ»ÖÃ+1(Á½¸ö¼¯ºÏ±ØĞëÊÇÓĞĞòµÄ)
+    // è¿”å›ç›®æ ‡å…ƒç´ çš„æœ€åä¸€ä¸ªä½ç½®+1(ä¸¤ä¸ªé›†åˆå¿…é¡»æ˜¯æœ‰åºçš„)
     // iterator set_union(iterator start, iterator end, iterator start2, iterator end2, iterator startDest);
     vector<int>::iterator itEnd = set_union(v.begin(), v.end(), v2.begin(), v2.end(), v3.begin());
     for (vector<int>::iterator it = v3.begin(); it != itEnd; it++)

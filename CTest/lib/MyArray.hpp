@@ -3,45 +3,45 @@
 #define __MY_ARRAY_H__
 
 /// <summary>
-/// ×Ô¶¨ÒåÊı×éÀà
+/// è‡ªå®šä¹‰æ•°ç»„ç±»
 /// </summary>
-/// <typeparam name="T">Êı¾İÀàĞÍ</typeparam>
+/// <typeparam name="T">æ•°æ®ç±»å‹</typeparam>
 template<class T>
 class MyArray
 {
 private:
-    // ÈİÁ¿
+    // å®¹é‡
     int capacity;
-    // ´óĞ¡
+    // å¤§å°
     int size;
-    // Êı¾İÊ×µØÖ·
+    // æ•°æ®é¦–åœ°å€
     T* data;
 
 public:
     /// <summary>
-    /// ¹¹Ôìº¯Êı
+    /// æ„é€ å‡½æ•°
     /// </summary>
-    /// <param name="capacity">ÈİÁ¿</param>
+    /// <param name="capacity">å®¹é‡</param>
     MyArray(int capacity)
     {
-        cout << this << " ¹¹Ôìº¯Êı" << endl;
+        cout << this << " æ„é€ å‡½æ•°" << endl;
         this->capacity = capacity;
         this->size = 0;
         this->data = new T[capacity];
     }
 
     /// <summary>
-    /// ¿½±´¹¹Ôì
+    /// æ‹·è´æ„é€ 
     /// </summary>
-    /// <param name="arr">Ô­Êı×é</param>
+    /// <param name="arr">åŸæ•°ç»„</param>
     MyArray(const MyArray& arr)
     {
-        cout << this << " ¿½±´¹¹Ôì" << endl;
+        cout << this << " æ‹·è´æ„é€ " << endl;
         this->capacity = arr.capacity;
         this->size = arr.size;
-        // Éî¿½±´£¬´´½¨¶Ñ
+        // æ·±æ‹·è´ï¼Œåˆ›å»ºå †
         this->data = new T[arr.capacity];
-        // °ÑÖµ¸´ÖÆ¹ıÀ´
+        // æŠŠå€¼å¤åˆ¶è¿‡æ¥
         for (int i = 0; i < size; i++)
         {
             this->data[i] = arr.data[i];
@@ -49,39 +49,39 @@ public:
     }
 
     /// <summary>
-    /// ÖØÔØ=²Ù×÷·û
+    /// é‡è½½=æ“ä½œç¬¦
     /// </summary>
-    /// <param name="arr">Ô­Êı×é</param>
+    /// <param name="arr">åŸæ•°ç»„</param>
     /// <returns>MyArray</returns>
     MyArray& operator=(const MyArray& arr)
     {
-        cout << this << " ÖØÔØ=²Ù×÷·û" << endl;
-        /* 1.Îö¹¹ */
-        // ÊÍ·Å¶ÑÇøÊı¾İ
+        cout << this << " é‡è½½=æ“ä½œç¬¦" << endl;
+        /* 1.ææ„ */
+        // é‡Šæ”¾å †åŒºæ•°æ®
         if (this->data != NULL)
         {
             delete[] this->data;
             this->data = NULL;
         }
-        /* 2.¿½±´¹¹Ôì */
+        /* 2.æ‹·è´æ„é€  */
         this->capacity = arr.capacity;
         this->size = arr.size;
-        // Éî¿½±´£¬´´½¨¶Ñ
+        // æ·±æ‹·è´ï¼Œåˆ›å»ºå †
         this->data = new T[arr.capacity];
-        // °ÑÖµ¸´ÖÆ¹ıÀ´
+        // æŠŠå€¼å¤åˆ¶è¿‡æ¥
         for (int i = 0; i < size; i++)
         {
             this->data[i] = arr.data[i];
         }
-        // 3.·µ»Ø*this
+        // 3.è¿”å›*this
         return *this;
     }
 
-    // Îö¹¹º¯Êı
+    // ææ„å‡½æ•°
     ~MyArray()
     {
-        cout << this << " Îö¹¹º¯Êı" << endl;
-        // ÊÍ·Å¶ÑÇøÊı¾İ
+        cout << this << " ææ„å‡½æ•°" << endl;
+        // é‡Šæ”¾å †åŒºæ•°æ®
         if (this->data != NULL)
         {
             delete[] this->data;
@@ -90,61 +90,61 @@ public:
     }
 
     /// <summary>
-    /// ²åÈëµ½Î²²¿
+    /// æ’å…¥åˆ°å°¾éƒ¨
     /// </summary>
-    /// <param name="v">ÊıÖµ</param>
+    /// <param name="v">æ•°å€¼</param>
     void push(const T& v)
     {
-        // ³¬³öÈİÁ¿
+        // è¶…å‡ºå®¹é‡
         if (this->size == this->capacity)
         {
             return;
         }
-        // ²åÈëµ½Î²²¿£¬size++
+        // æ’å…¥åˆ°å°¾éƒ¨ï¼Œsize++
         this->data[this->size++] = v;
     }
 
     /// <summary>
-    /// µ¯³öÎ²²¿Öµ
+    /// å¼¹å‡ºå°¾éƒ¨å€¼
     /// </summary>
-    /// <returns>Î²²¿Öµ</returns>
+    /// <returns>å°¾éƒ¨å€¼</returns>
     T& pop()
     {
-        // Ã»ÓĞÖµ£¬Å×³öÒì³£×Ö·û´®
+        // æ²¡æœ‰å€¼ï¼ŒæŠ›å‡ºå¼‚å¸¸å­—ç¬¦ä¸²
         if (this->size == 0)
         {
-            throw "Êı×é³¤¶ÈÎª0";
+            throw "æ•°ç»„é•¿åº¦ä¸º0";
         }
         size--;
-        // ·µ»ØÎ²²¿Öµ
+        // è¿”å›å°¾éƒ¨å€¼
         return data[this->size];
     }
 
     /// <summary>
-    /// ´ÓÎ²²¿É¾³ı
+    /// ä»å°¾éƒ¨åˆ é™¤
     /// </summary>
     void del()
     {
-        // Ã»ÓĞÖµ£¬Å×³öÒì³£×Ö·û´®
+        // æ²¡æœ‰å€¼ï¼ŒæŠ›å‡ºå¼‚å¸¸å­—ç¬¦ä¸²
         if (this->size == 0)
         {
-            throw "Êı×é³¤¶ÈÎª0";
+            throw "æ•°ç»„é•¿åº¦ä¸º0";
         }
         size--;
     }
 
     /// <summary>
-    /// ÏÂ±ê·ÃÎÊºÍĞŞ¸Ä
+    /// ä¸‹æ ‡è®¿é—®å’Œä¿®æ”¹
     /// </summary>
-    /// <param name="index">ÏÂ±ê</param>
-    /// <returns>ÏÂ±ê¶ÔÓ¦µÄÖµ</returns>
+    /// <param name="index">ä¸‹æ ‡</param>
+    /// <returns>ä¸‹æ ‡å¯¹åº”çš„å€¼</returns>
     T& operator[](int index)
     {
         return this->data[index];
     }
 
     /// <summary>
-    /// ·µ»ØÈİÁ¿
+    /// è¿”å›å®¹é‡
     /// </summary>
     /// <returns></returns>
     int getCapacity()
@@ -153,7 +153,7 @@ public:
     }
 
     /// <summary>
-    /// ·µ»Ø´óĞ¡
+    /// è¿”å›å¤§å°
     /// </summary>
     /// <returns></returns>
     int getSize()

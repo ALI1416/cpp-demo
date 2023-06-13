@@ -4,21 +4,21 @@ using namespace std;
 class Person4
 {
 public:
-    // ¾²Ì¬ÊôÐÔ
-    // 1.ËùÓÐ¶ÔÏó¹²ÏíÒ»·ÝÊý¾Ý
-    // 2.±àÒë½×¶Î·ÖÅäÄÚ´æ
-    // 3.ÀàÄÚÉùÃ÷£¬ÀàÍâ³õÊ¼»¯
+    // é™æ€å±žæ€§
+    // 1.æ‰€æœ‰å¯¹è±¡å…±äº«ä¸€ä»½æ•°æ®
+    // 2.ç¼–è¯‘é˜¶æ®µåˆ†é…å†…å­˜
+    // 3.ç±»å†…å£°æ˜Žï¼Œç±»å¤–åˆå§‹åŒ–
     static string name;
 
-    // ¾²Ì¬·½·¨£¬ËùÓÐ¶ÔÏó¹²ÏíÒ»¸öº¯Êý
+    // é™æ€æ–¹æ³•ï¼Œæ‰€æœ‰å¯¹è±¡å…±äº«ä¸€ä¸ªå‡½æ•°
     static void print()
     {
-        // ¾²Ì¬·½·¨Ö»ÄÜ·ÃÎÊ¾²Ì¬ÊôÐÔ
-        cout << "¾²Ì¬·½·¨£ºÐÕÃû£º" << name << endl;
+        // é™æ€æ–¹æ³•åªèƒ½è®¿é—®é™æ€å±žæ€§
+        cout << "é™æ€æ–¹æ³•ï¼šå§“åï¼š" << name << endl;
     }
 };
 
-// ¾²Ì¬ÊôÐÔ£¬ÀàÍâ³õÊ¼»¯(±ØÐë)
+// é™æ€å±žæ€§ï¼Œç±»å¤–åˆå§‹åŒ–(å¿…é¡»)
 string Person4::name = "ck";
 
 class Person5
@@ -31,29 +31,29 @@ class Person6
 };
 
 void main007() {
-    /* ·ÃÎÊ¾²Ì¬ÊôÐÔ */
-    // 1.Í¨¹ý¶ÔÏó·ÃÎÊ
+    /* è®¿é—®é™æ€å±žæ€§ */
+    // 1.é€šè¿‡å¯¹è±¡è®¿é—®
     Person4 p1;
-    cout << "ÐÕÃû£º" << p1.name << endl;
-    // 2.Í¨¹ýÀàÃû·ÃÎÊ
+    cout << "å§“åï¼š" << p1.name << endl;
+    // 2.é€šè¿‡ç±»åè®¿é—®
     p1.name = "kk";
-    cout << "ÐÕÃû£º" << Person4::name << endl;
+    cout << "å§“åï¼š" << Person4::name << endl;
 
-    /* ·ÃÎÊ¾²Ì¬·½·¨ */
-    // 1.Í¨¹ý¶ÔÏó·ÃÎÊ
+    /* è®¿é—®é™æ€æ–¹æ³• */
+    // 1.é€šè¿‡å¯¹è±¡è®¿é—®
     Person4 p2;
     p2.print();
-    // 2.Í¨¹ýÀàÃû·ÃÎÊ
+    // 2.é€šè¿‡ç±»åè®¿é—®
     Person4::print();
 
-    /* ¿Õ¼äÕ¼ÓÃÇé¿ö */
-    // ²»º¬ÈÎºÎÊôÐÔºÍ·½·¨µÄÀà£¬Õ¼ÓÃ1¸ö×Ö½Ú
+    /* ç©ºé—´å ç”¨æƒ…å†µ */
+    // ä¸å«ä»»ä½•å±žæ€§å’Œæ–¹æ³•çš„ç±»ï¼Œå ç”¨1ä¸ªå­—èŠ‚
     Person5 p3;
-    cout << "Person5£ºÕ¼ÓÃ×Ö½ÚÊý£º" << sizeof(p3) << endl;
-    // ·Ç¿ÕÊôÐÔµÄÀà£¬Õ¼ÓÃËùÓÐ·Ç¾²Ì¬ÊôÐÔÕ¼ÓÃµÄ¿Õ¼ä
+    cout << "Person5ï¼šå ç”¨å­—èŠ‚æ•°ï¼š" << sizeof(p3) << endl;
+    // éžç©ºå±žæ€§çš„ç±»ï¼Œå ç”¨æ‰€æœ‰éžé™æ€å±žæ€§å ç”¨çš„ç©ºé—´
     Person6 p4;
-    cout << "Person6£ºÕ¼ÓÃ×Ö½ÚÊý£º" << sizeof(p4) << endl;
-    // ÀàÕ¼ÓÃ×Ö½ÚÊý£ºÖ»¼ÆËã·Ç¿ÕÊôÐÔÕ¼ÓÃµÄ¿Õ¼ä£¬Èç¹ûÃ»ÓÐ£¬ÔòÕ¼ÓÃ1¸ö×Ö½Ú
+    cout << "Person6ï¼šå ç”¨å­—èŠ‚æ•°ï¼š" << sizeof(p4) << endl;
+    // ç±»å ç”¨å­—èŠ‚æ•°ï¼šåªè®¡ç®—éžç©ºå±žæ€§å ç”¨çš„ç©ºé—´ï¼Œå¦‚æžœæ²¡æœ‰ï¼Œåˆ™å ç”¨1ä¸ªå­—èŠ‚
     Person4 p5;
-    cout << "Person4£ºÕ¼ÓÃ×Ö½ÚÊý£º" << sizeof(p5) << endl;
+    cout << "Person4ï¼šå ç”¨å­—èŠ‚æ•°ï¼š" << sizeof(p5) << endl;
 }

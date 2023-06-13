@@ -8,7 +8,7 @@ public:
     int year;
     Person14(string name,int year) :name(name),year(year) {}
 
-    // ÖØÔØ==
+    // é‡è½½==
     bool operator==(Person14& p)
     {
         return this->name == p.name && this->year == p.year;

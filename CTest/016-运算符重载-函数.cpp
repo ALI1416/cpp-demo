@@ -7,12 +7,12 @@ public:
     string name;
     int year;
 
-    // ÖØÔØ()
+    // é‡è½½()
     void operator()()
     {
-        cout << "ĞÕÃû£º" << name << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
-    // ÖØÔØ()£¬´ø²Î
+    // é‡è½½()ï¼Œå¸¦å‚
     void operator()(string s)
     {
         cout << s << endl;
@@ -22,18 +22,18 @@ public:
 class MyAdd
 {
 public:
-    // ÓĞ·µ»ØÖµ
+    // æœ‰è¿”å›å€¼
     int operator()(int a, int b)
     {
         return a + b;
     }
 };
 
-// º¯Êı¶ÔÏó¿ÉÒÔÓµÓĞ×Ô¼ºµÄÄÚ²¿×´Ì¬
+// å‡½æ•°å¯¹è±¡å¯ä»¥æ‹¥æœ‰è‡ªå·±çš„å†…éƒ¨çŠ¶æ€
 class MyPrint
 {
 public:
-    // ÄÚ²¿×´Ì¬
+    // å†…éƒ¨çŠ¶æ€
     int count;
 
     MyPrint()
@@ -48,7 +48,7 @@ public:
     }
 };
 
-// º¯Êı¶ÔÏó×÷Îª²ÎÊı´«µİ
+// å‡½æ•°å¯¹è±¡ä½œä¸ºå‚æ•°ä¼ é€’
 void doPrint(MyPrint& myPrint, string msg)
 {
     myPrint(msg);
@@ -59,16 +59,16 @@ void main016()
     Person15 p;
     p.name = "ck";
     p.year = 1998;
-    // ÓÉÓÚÊ¹ÓÃÆğÀ´ÀàËÆº¯Êıµ÷ÓÃ£¬ËùÒÔÒ²½Ğ·Âº¯Êı
+    // ç”±äºä½¿ç”¨èµ·æ¥ç±»ä¼¼å‡½æ•°è°ƒç”¨ï¼Œæ‰€ä»¥ä¹Ÿå«ä»¿å‡½æ•°
     p();
-    // µ÷ÓÃÄäÃûº¯Êı¶ÔÏó
+    // è°ƒç”¨åŒ¿åå‡½æ•°å¯¹è±¡
     Person15()("Hello, World !");
 
-    // µ÷ÓÃÓĞ·µ»ØÖµµÄº¯Êı¶ÔÏó
+    // è°ƒç”¨æœ‰è¿”å›å€¼çš„å‡½æ•°å¯¹è±¡
     MyAdd myAdd;
     cout << myAdd(2, 3) << endl;
 
-    // µ÷ÓÃÓµÓĞ×Ô¼ºµÄÄÚ²¿×´Ì¬
+    // è°ƒç”¨æ‹¥æœ‰è‡ªå·±çš„å†…éƒ¨çŠ¶æ€
     MyPrint myPrint;
     myPrint("Hello");
     myPrint("World");
@@ -76,7 +76,7 @@ void main016()
     myPrint("C++");
     cout << myPrint.count << endl;
 
-    // º¯Êı¶ÔÏó×÷Îª²ÎÊı´«µİ
+    // å‡½æ•°å¯¹è±¡ä½œä¸ºå‚æ•°ä¼ é€’
     doPrint(myPrint, "Hello, World !");
 
 }

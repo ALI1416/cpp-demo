@@ -15,6 +15,7 @@ void main065()
 {
     vector<int> v;
     v.resize(10);
+    // 填充
     // T fill(iterator start, iterator end, T value);
     fill(v.begin(), v.end(), 123);
     print065(v);

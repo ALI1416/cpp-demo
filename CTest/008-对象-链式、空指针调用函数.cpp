@@ -11,7 +11,7 @@ public:
     Person7& setName(string name)
     {
         this->name = name;
-        // ·µ»Ø*this¿ÉÒÔ½øĞĞÁ´Ê½µ÷ÓÃ
+        // è¿”å›*thiså¯ä»¥è¿›è¡Œé“¾å¼è°ƒç”¨
         return *this;
     }
     Person7& setGender(bool gender)
@@ -26,7 +26,7 @@ public:
     }
     void print()
     {
-        cout << "ĞÕÃû£º" << name << "£¬ĞÔ±ğ£º" << (gender == true ? "ÄĞ" : "Å®") << "£¬³öÉúÄê£º" << year << endl;
+        cout << "å§“åï¼š" << name << "ï¼Œæ€§åˆ«ï¼š" << (gender == true ? "ç”·" : "å¥³") << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << year << endl;
     }
     void print2()
     {
@@ -34,24 +34,24 @@ public:
     }
     void print3()
     {
-        // ·ÀÖ¹¿ÕÖ¸Õëµ÷ÓÃº¯Êı±ÀÀ££¬¼ÓÉÏÅĞ¶Ï
+        // é˜²æ­¢ç©ºæŒ‡é’ˆè°ƒç”¨å‡½æ•°å´©æºƒï¼ŒåŠ ä¸Šåˆ¤æ–­
         if (this == NULL)
         {
             return;
         }
-        cout << "ĞÕÃû£º" << name << endl;
+        cout << "å§“åï¼š" << name << endl;
     }
 };
 
 void main008()
 {
     Person7 p;
-    // ½øĞĞÁ´Ê½µ÷ÓÃ
+    // è¿›è¡Œé“¾å¼è°ƒç”¨
     p.setName("ck").setGender(true).setYear(1998);
     p.print();
 
     Person7* p2 = NULL;
-    // ¿ÕÖ¸Õëµ÷ÓÃº¯Êı
+    // ç©ºæŒ‡é’ˆè°ƒç”¨å‡½æ•°
     p2->print2();
     p2->print3();
 }

@@ -1,16 +1,16 @@
 #include<iostream>
 using namespace std;
 
-// ¶Ô×é ³É¶ÔµÄÊı¾İ
+// å¯¹ç»„ æˆå¯¹çš„æ•°æ®
 void main043()
 {
-    /* ¹¹ÔìºÍ»ñÈ¡ */
-    // ¹¹Ôì
+    /* æ„é€ å’Œè·å– */
+    // æ„é€ 
     // pair<T1,T2>();
     pair<string, int> ck("ChengKai", 1998);
     // pari<T1,T2> make_pair(const T1& t1, const T1& t1);
     pair<string, int> kk = make_pair("Kai", 2008);
-    // »ñÈ¡
-    cout << "ĞÕÃû£º" << ck.first << "£¬³öÉúÄê£º" << ck.second << endl;
-    cout << "ĞÕÃû£º" << kk.first << "£¬³öÉúÄê£º" << kk.second << endl;
+    // è·å–
+    cout << "å§“åï¼š" << ck.first << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << ck.second << endl;
+    cout << "å§“åï¼š" << kk.first << "ï¼Œå‡ºç”Ÿå¹´ï¼š" << kk.second << endl;
 }
